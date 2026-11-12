@@ -1,0 +1,781 @@
+{
+  "config": {
+    "checkpoints": {
+      "smooth_cfm_gmm": "data/checkpoints/smooth_gmm.pt",
+      "sygaldry_public_slice": "vendor/tnwf-paper/examples/checkpoints/mps_v_gmm_d8.pt"
+    },
+    "steps": 64,
+    "balance_samples": 17,
+    "tolerances": [
+      0.01,
+      0.001
+    ],
+    "max_core_fraction_bits": 15,
+    "logical_qubit_caps": [
+      16,
+      32,
+      64,
+      128,
+      256,
+      512
+    ],
+    "cases": [
+      {
+        "case": "smooth-n4-early",
+        "dataset": "smooth_cfm_gmm",
+        "dimension": 2,
+        "grid": 4,
+        "step_index": 0,
+        "rank_caps": [
+          1,
+          2,
+          4
+        ],
+        "precision_sweep_bits": [
+          2,
+          4,
+          6,
+          8
+        ]
+      },
+      {
+        "case": "smooth-n4-late",
+        "dataset": "smooth_cfm_gmm",
+        "dimension": 2,
+        "grid": 4,
+        "step_index": 63,
+        "rank_caps": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "case": "smooth-n8-mid",
+        "dataset": "smooth_cfm_gmm",
+        "dimension": 2,
+        "grid": 8,
+        "step_index": 31,
+        "rank_caps": [
+          2,
+          4,
+          8
+        ],
+        "gauge_ablation": true
+      },
+      {
+        "case": "smooth-n16-late",
+        "dataset": "smooth_cfm_gmm",
+        "dimension": 2,
+        "grid": 16,
+        "step_index": 63,
+        "rank_caps": [
+          4,
+          8,
+          11
+        ]
+      },
+      {
+        "case": "public-d3-n4-early",
+        "dataset": "sygaldry_public_slice",
+        "dimension": 3,
+        "grid": 4,
+        "step_index": 0,
+        "rank_caps": [
+          1,
+          2,
+          4
+        ],
+        "fixed_indices": [
+          1,
+          2,
+          3,
+          1,
+          2
+        ]
+      },
+      {
+        "case": "public-d3-n4-mid",
+        "dataset": "sygaldry_public_slice",
+        "dimension": 3,
+        "grid": 4,
+        "step_index": 31,
+        "rank_caps": [
+          1,
+          2,
+          4
+        ],
+        "fixed_indices": [
+          1,
+          2,
+          3,
+          1,
+          2
+        ],
+        "gauge_ablation": true
+      },
+      {
+        "case": "public-d3-n2-late",
+        "dataset": "sygaldry_public_slice",
+        "dimension": 3,
+        "grid": 2,
+        "step_index": 63,
+        "rank_caps": [
+          1,
+          2
+        ],
+        "fixed_indices": [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "compare_native_rank": true
+      },
+      {
+        "case": "public-d4-n2-late",
+        "dataset": "sygaldry_public_slice",
+        "dimension": 4,
+        "grid": 2,
+        "step_index": 63,
+        "rank_caps": [
+          1,
+          2,
+          4
+        ],
+        "fixed_indices": [
+          0,
+          1,
+          0,
+          1
+        ]
+      }
+    ],
+    "workspace_ablation": {
+      "seed": 490,
+      "dimension": 4,
+      "grid": 2,
+      "rank": 5,
+      "scale": 0.7,
+      "core_fraction_bits": 5,
+      "stage_fraction_cap": 8,
+      "beta": 0.125,
+      "tolerance": 0.04,
+      "synthesis_budget": 0.0001
+    }
+  },
+  "environment": {
+    "python": "3.12.15",
+    "platform": "macOS-15.7.8-arm64-arm-64bit",
+    "numpy": "2.3.5",
+    "qiskit": "2.2.2",
+    "torch": "2.8.0"
+  },
+  "checkpoints_sha256": {
+    "smooth_cfm_gmm": "d8d4312ff56a28fb3a3bcd8c877e4176c4f98347013731f82f9cb510d46ead83",
+    "sygaldry_public_slice": "4c886fec5c4dba38b3cb5866e8b29d7392ab4a5a6ddd7f60c3ce7f51d9d14eb2"
+  },
+  "certification": "exact clean computational paths and rational phase-angle upper bounds modulo 2\u03c0; finite binary64 target table; all synthesis allocations conditional",
+  "scope": "candidate frontier over the measured circuits; public eight-coordinate checkpoint evaluated on controlled slices",
+  "resource_model": "all-to-all logical, clean-ancilla circuits; v0.2 7-T exact Toffoli and estimated 3 log2(1/delta)+10 per arbitrary rotation; no actual Clifford+T synthesis",
+  "circuits": 252,
+  "qualified_matched_circuits": 238,
+  "exact_clean_branch_cases": 15600,
+  "searches": [
+    {
+      "case": "smooth-n4-early",
+      "tolerance": 0.01,
+      "rank_name": "rank1",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "smooth-n4-early",
+      "tolerance": 0.01,
+      "rank_name": "rank2",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "smooth-n4-early",
+      "tolerance": 0.01,
+      "rank_name": "rank4",
+      "gauge": "svd",
+      "examined_v03": 50,
+      "eligible_exact_arithmetic": 32,
+      "measured_plans": 5,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.02123858395498246
+    },
+    {
+      "case": "smooth-n4-early",
+      "tolerance": 0.001,
+      "rank_name": "rank1",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "smooth-n4-early",
+      "tolerance": 0.001,
+      "rank_name": "rank2",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "smooth-n4-early",
+      "tolerance": 0.001,
+      "rank_name": "rank4",
+      "gauge": "svd",
+      "examined_v03": 55,
+      "eligible_exact_arithmetic": 24,
+      "measured_plans": 5,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.021443584002554417
+    },
+    {
+      "case": "smooth-n4-late",
+      "tolerance": 0.01,
+      "rank_name": "rank1",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "smooth-n4-late",
+      "tolerance": 0.01,
+      "rank_name": "rank2",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "smooth-n4-late",
+      "tolerance": 0.01,
+      "rank_name": "rank4",
+      "gauge": "svd",
+      "examined_v03": 50,
+      "eligible_exact_arithmetic": 23,
+      "measured_plans": 5,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.02031016699038446
+    },
+    {
+      "case": "smooth-n4-late",
+      "tolerance": 0.001,
+      "rank_name": "rank1",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "smooth-n4-late",
+      "tolerance": 0.001,
+      "rank_name": "rank2",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "smooth-n4-late",
+      "tolerance": 0.001,
+      "rank_name": "rank4",
+      "gauge": "svd",
+      "examined_v03": 50,
+      "eligible_exact_arithmetic": 17,
+      "measured_plans": 3,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.021513417013920844
+    },
+    {
+      "case": "smooth-n8-mid",
+      "tolerance": 0.01,
+      "rank_name": "rank2",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "smooth-n8-mid",
+      "tolerance": 0.01,
+      "rank_name": "rank4",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "smooth-n8-mid",
+      "tolerance": 0.01,
+      "rank_name": "rank8",
+      "gauge": "svd",
+      "examined_v03": 44,
+      "eligible_exact_arithmetic": 19,
+      "measured_plans": 3,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.06994512490928173
+    },
+    {
+      "case": "smooth-n8-mid",
+      "tolerance": 0.01,
+      "rank_name": "rank8",
+      "gauge": "dyadic-balance",
+      "examined_v03": 44,
+      "eligible_exact_arithmetic": 19,
+      "measured_plans": 3,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.07671729102730751
+    },
+    {
+      "case": "smooth-n8-mid",
+      "tolerance": 0.001,
+      "rank_name": "rank2",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "smooth-n8-mid",
+      "tolerance": 0.001,
+      "rank_name": "rank4",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "smooth-n8-mid",
+      "tolerance": 0.001,
+      "rank_name": "rank8",
+      "gauge": "svd",
+      "examined_v03": 55,
+      "eligible_exact_arithmetic": 18,
+      "measured_plans": 3,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.07710395799949765
+    },
+    {
+      "case": "smooth-n8-mid",
+      "tolerance": 0.001,
+      "rank_name": "rank8",
+      "gauge": "dyadic-balance",
+      "examined_v03": 55,
+      "eligible_exact_arithmetic": 18,
+      "measured_plans": 3,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.07700900000054389
+    },
+    {
+      "case": "smooth-n16-late",
+      "tolerance": 0.01,
+      "rank_name": "rank4",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "smooth-n16-late",
+      "tolerance": 0.01,
+      "rank_name": "rank8",
+      "gauge": "svd",
+      "examined_v03": 55,
+      "eligible_exact_arithmetic": 16,
+      "measured_plans": 4,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.15332754200790077
+    },
+    {
+      "case": "smooth-n16-late",
+      "tolerance": 0.01,
+      "rank_name": "rank11",
+      "gauge": "svd",
+      "examined_v03": 55,
+      "eligible_exact_arithmetic": 18,
+      "measured_plans": 3,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.19525095797143877
+    },
+    {
+      "case": "smooth-n16-late",
+      "tolerance": 0.001,
+      "rank_name": "rank4",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "smooth-n16-late",
+      "tolerance": 0.001,
+      "rank_name": "rank8",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "smooth-n16-late",
+      "tolerance": 0.001,
+      "rank_name": "rank11",
+      "gauge": "svd",
+      "examined_v03": 57,
+      "eligible_exact_arithmetic": 18,
+      "measured_plans": 3,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.27439687494188547
+    },
+    {
+      "case": "public-d3-n4-early",
+      "tolerance": 0.01,
+      "rank_name": "rank1",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "public-d3-n4-early",
+      "tolerance": 0.01,
+      "rank_name": "rank2",
+      "gauge": "svd",
+      "examined_v03": 39,
+      "eligible_exact_arithmetic": 0,
+      "measured_plans": 0,
+      "analytic_plan_found": false,
+      "planning_seconds": 0.02874062501359731
+    },
+    {
+      "case": "public-d3-n4-early",
+      "tolerance": 0.01,
+      "rank_name": "rank4",
+      "gauge": "svd",
+      "examined_v03": 75,
+      "eligible_exact_arithmetic": 28,
+      "measured_plans": 5,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.06811045797076076
+    },
+    {
+      "case": "public-d3-n4-early",
+      "tolerance": 0.001,
+      "rank_name": "rank1",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "public-d3-n4-early",
+      "tolerance": 0.001,
+      "rank_name": "rank2",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "public-d3-n4-early",
+      "tolerance": 0.001,
+      "rank_name": "rank4",
+      "gauge": "svd",
+      "examined_v03": 75,
+      "eligible_exact_arithmetic": 26,
+      "measured_plans": 4,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.07724270899780095
+    },
+    {
+      "case": "public-d3-n4-mid",
+      "tolerance": 0.01,
+      "rank_name": "rank1",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "public-d3-n4-mid",
+      "tolerance": 0.01,
+      "rank_name": "rank2",
+      "gauge": "svd",
+      "examined_v03": 39,
+      "eligible_exact_arithmetic": 0,
+      "measured_plans": 0,
+      "analytic_plan_found": false,
+      "planning_seconds": 0.013151584076695144
+    },
+    {
+      "case": "public-d3-n4-mid",
+      "tolerance": 0.01,
+      "rank_name": "rank2",
+      "gauge": "dyadic-balance",
+      "examined_v03": 39,
+      "eligible_exact_arithmetic": 0,
+      "measured_plans": 0,
+      "analytic_plan_found": false,
+      "planning_seconds": 0.013364291982725263
+    },
+    {
+      "case": "public-d3-n4-mid",
+      "tolerance": 0.01,
+      "rank_name": "rank4",
+      "gauge": "svd",
+      "examined_v03": 75,
+      "eligible_exact_arithmetic": 24,
+      "measured_plans": 4,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.06746425002347678
+    },
+    {
+      "case": "public-d3-n4-mid",
+      "tolerance": 0.01,
+      "rank_name": "rank4",
+      "gauge": "dyadic-balance",
+      "examined_v03": 75,
+      "eligible_exact_arithmetic": 21,
+      "measured_plans": 4,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.06259220803622156
+    },
+    {
+      "case": "public-d3-n4-mid",
+      "tolerance": 0.001,
+      "rank_name": "rank1",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "public-d3-n4-mid",
+      "tolerance": 0.001,
+      "rank_name": "rank2",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "public-d3-n4-mid",
+      "tolerance": 0.001,
+      "rank_name": "rank4",
+      "gauge": "svd",
+      "examined_v03": 75,
+      "eligible_exact_arithmetic": 29,
+      "measured_plans": 5,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.06971191707998514
+    },
+    {
+      "case": "public-d3-n4-mid",
+      "tolerance": 0.001,
+      "rank_name": "rank4",
+      "gauge": "dyadic-balance",
+      "examined_v03": 75,
+      "eligible_exact_arithmetic": 16,
+      "measured_plans": 4,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.06796912499703467
+    },
+    {
+      "case": "public-d3-n2-late",
+      "tolerance": 0.01,
+      "rank_name": "rank1",
+      "gauge": "svd",
+      "examined_v03": 39,
+      "eligible_exact_arithmetic": 0,
+      "measured_plans": 0,
+      "analytic_plan_found": false,
+      "planning_seconds": 0.007562667015008628
+    },
+    {
+      "case": "public-d3-n2-late",
+      "tolerance": 0.01,
+      "rank_name": "rank2",
+      "gauge": "svd",
+      "examined_v03": 75,
+      "eligible_exact_arithmetic": 13,
+      "measured_plans": 3,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.02024879097007215
+    },
+    {
+      "case": "public-d3-n2-late",
+      "tolerance": 0.01,
+      "rank_name": "native-rank",
+      "gauge": "svd",
+      "examined_v03": 75,
+      "eligible_exact_arithmetic": 10,
+      "measured_plans": 2,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.09541754191741347
+    },
+    {
+      "case": "public-d3-n2-late",
+      "tolerance": 0.001,
+      "rank_name": "rank1",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "public-d3-n2-late",
+      "tolerance": 0.001,
+      "rank_name": "rank2",
+      "gauge": "svd",
+      "examined_v03": 75,
+      "eligible_exact_arithmetic": 29,
+      "measured_plans": 3,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.02181654202286154
+    },
+    {
+      "case": "public-d3-n2-late",
+      "tolerance": 0.001,
+      "rank_name": "native-rank",
+      "gauge": "svd",
+      "examined_v03": 75,
+      "eligible_exact_arithmetic": 13,
+      "measured_plans": 2,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.10939833300653845
+    },
+    {
+      "case": "public-d4-n2-late",
+      "tolerance": 0.01,
+      "rank_name": "rank1",
+      "gauge": "svd",
+      "examined_v03": 39,
+      "eligible_exact_arithmetic": 0,
+      "measured_plans": 0,
+      "analytic_plan_found": false,
+      "planning_seconds": 0.00503320898860693
+    },
+    {
+      "case": "public-d4-n2-late",
+      "tolerance": 0.01,
+      "rank_name": "rank2",
+      "gauge": "svd",
+      "examined_v03": 75,
+      "eligible_exact_arithmetic": 14,
+      "measured_plans": 2,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.021989208064042032
+    },
+    {
+      "case": "public-d4-n2-late",
+      "tolerance": 0.01,
+      "rank_name": "rank4",
+      "gauge": "svd",
+      "examined_v03": 75,
+      "eligible_exact_arithmetic": 18,
+      "measured_plans": 3,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.032688000006601214
+    },
+    {
+      "case": "public-d4-n2-late",
+      "tolerance": 0.001,
+      "rank_name": "rank1",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "public-d4-n2-late",
+      "tolerance": 0.001,
+      "rank_name": "rank2",
+      "examined_v03": 0,
+      "status": "rank residual exceeded twice the approximation allocation"
+    },
+    {
+      "case": "public-d4-n2-late",
+      "tolerance": 0.001,
+      "rank_name": "rank4",
+      "gauge": "svd",
+      "examined_v03": 75,
+      "eligible_exact_arithmetic": 14,
+      "measured_plans": 3,
+      "analytic_plan_found": true,
+      "planning_seconds": 0.03347220900468528
+    }
+  ],
+  "independent_simulator_crosschecks": [
+    {
+      "candidate": "smooth-n4-early/eps0.01/walsh-block0",
+      "case": "smooth-n4-early",
+      "inverse_exact_operator_bound": 2.4492935982947064e-16,
+      "validated_inputs": 16,
+      "exhaustive": true,
+      "address_preserved": true,
+      "ancillas_clean": true,
+      "inverse_ancillas_clean": true,
+      "basis_phase_error": 4.205336100044299e-16,
+      "superposition_error": 3.3509956721754405e-16,
+      "inverse_error": 5.445740020174236e-16
+    },
+    {
+      "candidate": "smooth-n4-early/eps0.01/qrom-block0",
+      "case": "smooth-n4-early",
+      "inverse_exact_operator_bound": 0.0,
+      "validated_inputs": 16,
+      "exhaustive": true,
+      "address_preserved": true,
+      "ancillas_clean": true,
+      "inverse_ancillas_clean": true,
+      "basis_phase_error": 3.0531133177191805e-16,
+      "superposition_error": 2.0990560071185528e-16,
+      "inverse_error": 2.268168902497118e-16
+    },
+    {
+      "candidate": "smooth-n4-early/eps0.01/selectswap-block1",
+      "case": "smooth-n4-early",
+      "inverse_exact_operator_bound": 0.0,
+      "validated_inputs": 16,
+      "exhaustive": true,
+      "address_preserved": true,
+      "ancillas_clean": true,
+      "inverse_ancillas_clean": true,
+      "basis_phase_error": 3.0531133177191805e-16,
+      "superposition_error": 2.0990560071185528e-16,
+      "inverse_error": 2.268168902497118e-16
+    },
+    {
+      "candidate": "smooth-n4-early/eps0.01/direct_fourier",
+      "case": "smooth-n4-early",
+      "inverse_exact_operator_bound": 2.4492935982947064e-16,
+      "validated_inputs": 16,
+      "exhaustive": true,
+      "address_preserved": true,
+      "ancillas_clean": true,
+      "inverse_ancillas_clean": true,
+      "basis_phase_error": 4.661470218455653e-16,
+      "superposition_error": 4.521572317843663e-16,
+      "inverse_error": 7.243973453037693e-16
+    },
+    {
+      "candidate": "smooth-n4-early/eps0.01/rank4/v02-b4",
+      "case": "smooth-n4-early",
+      "inverse_exact_operator_bound": 0.0,
+      "validated_inputs": 16,
+      "exhaustive": true,
+      "address_preserved": true,
+      "ancillas_clean": true,
+      "inverse_ancillas_clean": true,
+      "basis_phase_error": 1.1857187100668868e-16,
+      "superposition_error": 1.9426848767452672e-16,
+      "inverse_error": 2.250426379648444e-16
+    },
+    {
+      "candidate": "smooth-n4-early/eps0.01/rank4/svd/f5,3-s5,8/retain",
+      "case": "smooth-n4-early",
+      "inverse_exact_operator_bound": 0.0,
+      "validated_inputs": 16,
+      "exhaustive": true,
+      "address_preserved": true,
+      "ancillas_clean": true,
+      "inverse_ancillas_clean": true,
+      "basis_phase_error": 1.1295700899707568e-16,
+      "superposition_error": 1.327362821054849e-16,
+      "inverse_error": 2.246564344494481e-16
+    },
+    {
+      "candidate": "smooth-n4-early/eps0.01/rank4/svd/f5,3-s3,3/retain",
+      "case": "smooth-n4-early",
+      "inverse_exact_operator_bound": 0.0,
+      "validated_inputs": 16,
+      "exhaustive": true,
+      "address_preserved": true,
+      "ancillas_clean": true,
+      "inverse_ancillas_clean": true,
+      "basis_phase_error": 1.1236938283130691e-16,
+      "superposition_error": 9.501867674673067e-17,
+      "inverse_error": 2.235610815089455e-16
+    },
+    {
+      "candidate": "public-d3-n4-early/eps0.01/rank4/svd/f7,7,7-s5,5,5/recompute",
+      "case": "public-d3-n4-early",
+      "inverse_exact_operator_bound": 0.0,
+      "validated_inputs": 64,
+      "exhaustive": true,
+      "address_preserved": true,
+      "ancillas_clean": true,
+      "inverse_ancillas_clean": true,
+      "basis_phase_error": 2.482534153247273e-16,
+      "superposition_error": 1.9332131181372194e-16,
+      "inverse_error": 4.483995724261368e-16
+    }
+  ],
+  "elapsed_seconds": 33.40383495797869
+}

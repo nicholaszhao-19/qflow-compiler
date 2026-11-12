@@ -1,0 +1,14 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "qiskit": "2.2.2",
+  "torch": "2.8.0+cpu",
+  "matplotlib": "3.10.8",
+  "pytest": "8.4.2",
+  "execution": "CPU classical circuit and numerical simulation",
+  "date": "2026-10-29",
+  "upstream_commit": "11358d3dca52193f93f037046229797296a2063e"
+}

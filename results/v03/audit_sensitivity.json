@@ -1,0 +1,737 @@
+{
+  "scope": "Fixed already-qualified candidate menu; re-score T projections only. Does not test actual synthesis, stronger lookup, physical costs, or unseen candidates.",
+  "scenarios": [
+    {
+      "slope": 3,
+      "offset": 0,
+      "winner_counts": {
+        "walsh": 7,
+        "selectswap": 9
+      },
+      "decisions": [
+        {
+          "case": "public-d3-n2-late",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "public-d3-n2-late/eps0.001/walsh-block0",
+          "projected_t": 294
+        },
+        {
+          "case": "public-d3-n2-late",
+          "tolerance": 0.01,
+          "winner": "walsh",
+          "candidate": "public-d3-n2-late/eps0.01/walsh-block0",
+          "projected_t": 224
+        },
+        {
+          "case": "public-d3-n4-early",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-early/eps0.001/selectswap-block2",
+          "projected_t": 1369
+        },
+        {
+          "case": "public-d3-n4-early",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-early/eps0.01/selectswap-block2",
+          "projected_t": 1037
+        },
+        {
+          "case": "public-d3-n4-mid",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-mid/eps0.001/selectswap-block2",
+          "projected_t": 1369
+        },
+        {
+          "case": "public-d3-n4-mid",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-mid/eps0.01/selectswap-block2",
+          "projected_t": 1037
+        },
+        {
+          "case": "public-d4-n2-late",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "public-d4-n2-late/eps0.001/walsh-block0",
+          "projected_t": 675
+        },
+        {
+          "case": "public-d4-n2-late",
+          "tolerance": 0.01,
+          "winner": "walsh",
+          "candidate": "public-d4-n2-late/eps0.01/walsh-block0",
+          "projected_t": 490
+        },
+        {
+          "case": "smooth-n16-late",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "smooth-n16-late/eps0.001/selectswap-block3",
+          "projected_t": 2545
+        },
+        {
+          "case": "smooth-n16-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n16-late/eps0.01/selectswap-block3",
+          "projected_t": 2045
+        },
+        {
+          "case": "smooth-n4-early",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "smooth-n4-early/eps0.001/walsh-block0",
+          "projected_t": 675
+        },
+        {
+          "case": "smooth-n4-early",
+          "tolerance": 0.01,
+          "winner": "walsh",
+          "candidate": "smooth-n4-early/eps0.01/walsh-block0",
+          "projected_t": 455
+        },
+        {
+          "case": "smooth-n4-late",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "smooth-n4-late/eps0.001/walsh-block0",
+          "projected_t": 675
+        },
+        {
+          "case": "smooth-n4-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n4-late/eps0.01/selectswap-block1",
+          "projected_t": 481
+        },
+        {
+          "case": "smooth-n8-mid",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "smooth-n8-mid/eps0.001/selectswap-block2",
+          "projected_t": 1369
+        },
+        {
+          "case": "smooth-n8-mid",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n8-mid/eps0.01/selectswap-block2",
+          "projected_t": 1037
+        }
+      ]
+    },
+    {
+      "slope": 3,
+      "offset": 10,
+      "winner_counts": {
+        "walsh": 5,
+        "selectswap": 11
+      },
+      "decisions": [
+        {
+          "case": "public-d3-n2-late",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "public-d3-n2-late/eps0.001/walsh-block0",
+          "projected_t": 364
+        },
+        {
+          "case": "public-d3-n2-late",
+          "tolerance": 0.01,
+          "winner": "walsh",
+          "candidate": "public-d3-n2-late/eps0.01/walsh-block0",
+          "projected_t": 294
+        },
+        {
+          "case": "public-d3-n4-early",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-early/eps0.001/selectswap-block2",
+          "projected_t": 1469
+        },
+        {
+          "case": "public-d3-n4-early",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-early/eps0.01/selectswap-block2",
+          "projected_t": 1107
+        },
+        {
+          "case": "public-d3-n4-mid",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-mid/eps0.001/selectswap-block2",
+          "projected_t": 1469
+        },
+        {
+          "case": "public-d3-n4-mid",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-mid/eps0.01/selectswap-block2",
+          "projected_t": 1107
+        },
+        {
+          "case": "public-d4-n2-late",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "public-d4-n2-late/eps0.001/walsh-block0",
+          "projected_t": 825
+        },
+        {
+          "case": "public-d4-n2-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d4-n2-late/eps0.01/selectswap-block1",
+          "projected_t": 603
+        },
+        {
+          "case": "smooth-n16-late",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "smooth-n16-late/eps0.001/selectswap-block3",
+          "projected_t": 2645
+        },
+        {
+          "case": "smooth-n16-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n16-late/eps0.01/selectswap-block3",
+          "projected_t": 2115
+        },
+        {
+          "case": "smooth-n4-early",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "smooth-n4-early/eps0.001/walsh-block0",
+          "projected_t": 825
+        },
+        {
+          "case": "smooth-n4-early",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n4-early/eps0.01/selectswap-block1",
+          "projected_t": 541
+        },
+        {
+          "case": "smooth-n4-late",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "smooth-n4-late/eps0.001/walsh-block0",
+          "projected_t": 825
+        },
+        {
+          "case": "smooth-n4-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n4-late/eps0.01/selectswap-block1",
+          "projected_t": 541
+        },
+        {
+          "case": "smooth-n8-mid",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "smooth-n8-mid/eps0.001/selectswap-block2",
+          "projected_t": 1469
+        },
+        {
+          "case": "smooth-n8-mid",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n8-mid/eps0.01/selectswap-block2",
+          "projected_t": 1107
+        }
+      ]
+    },
+    {
+      "slope": 3,
+      "offset": 20,
+      "winner_counts": {
+        "walsh": 5,
+        "selectswap": 11
+      },
+      "decisions": [
+        {
+          "case": "public-d3-n2-late",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "public-d3-n2-late/eps0.001/walsh-block0",
+          "projected_t": 434
+        },
+        {
+          "case": "public-d3-n2-late",
+          "tolerance": 0.01,
+          "winner": "walsh",
+          "candidate": "public-d3-n2-late/eps0.01/walsh-block0",
+          "projected_t": 364
+        },
+        {
+          "case": "public-d3-n4-early",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-early/eps0.001/selectswap-block2",
+          "projected_t": 1569
+        },
+        {
+          "case": "public-d3-n4-early",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-early/eps0.01/selectswap-block2",
+          "projected_t": 1177
+        },
+        {
+          "case": "public-d3-n4-mid",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-mid/eps0.001/selectswap-block2",
+          "projected_t": 1569
+        },
+        {
+          "case": "public-d3-n4-mid",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-mid/eps0.01/selectswap-block2",
+          "projected_t": 1177
+        },
+        {
+          "case": "public-d4-n2-late",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "public-d4-n2-late/eps0.001/walsh-block0",
+          "projected_t": 975
+        },
+        {
+          "case": "public-d4-n2-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d4-n2-late/eps0.01/selectswap-block1",
+          "projected_t": 673
+        },
+        {
+          "case": "smooth-n16-late",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "smooth-n16-late/eps0.001/selectswap-block3",
+          "projected_t": 2745
+        },
+        {
+          "case": "smooth-n16-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n16-late/eps0.01/selectswap-block3",
+          "projected_t": 2185
+        },
+        {
+          "case": "smooth-n4-early",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "smooth-n4-early/eps0.001/walsh-block0",
+          "projected_t": 975
+        },
+        {
+          "case": "smooth-n4-early",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n4-early/eps0.01/selectswap-block1",
+          "projected_t": 601
+        },
+        {
+          "case": "smooth-n4-late",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "smooth-n4-late/eps0.001/walsh-block0",
+          "projected_t": 975
+        },
+        {
+          "case": "smooth-n4-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n4-late/eps0.01/selectswap-block1",
+          "projected_t": 601
+        },
+        {
+          "case": "smooth-n8-mid",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "smooth-n8-mid/eps0.001/selectswap-block2",
+          "projected_t": 1569
+        },
+        {
+          "case": "smooth-n8-mid",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n8-mid/eps0.01/selectswap-block2",
+          "projected_t": 1177
+        }
+      ]
+    },
+    {
+      "slope": 4,
+      "offset": 0,
+      "winner_counts": {
+        "walsh": 5,
+        "selectswap": 11
+      },
+      "decisions": [
+        {
+          "case": "public-d3-n2-late",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "public-d3-n2-late/eps0.001/walsh-block0",
+          "projected_t": 392
+        },
+        {
+          "case": "public-d3-n2-late",
+          "tolerance": 0.01,
+          "winner": "walsh",
+          "candidate": "public-d3-n2-late/eps0.01/walsh-block0",
+          "projected_t": 294
+        },
+        {
+          "case": "public-d3-n4-early",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-early/eps0.001/selectswap-block2",
+          "projected_t": 1519
+        },
+        {
+          "case": "public-d3-n4-early",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-early/eps0.01/selectswap-block2",
+          "projected_t": 1107
+        },
+        {
+          "case": "public-d3-n4-mid",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-mid/eps0.001/selectswap-block2",
+          "projected_t": 1519
+        },
+        {
+          "case": "public-d3-n4-mid",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-mid/eps0.01/selectswap-block2",
+          "projected_t": 1107
+        },
+        {
+          "case": "public-d4-n2-late",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "public-d4-n2-late/eps0.001/walsh-block0",
+          "projected_t": 900
+        },
+        {
+          "case": "public-d4-n2-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d4-n2-late/eps0.01/selectswap-block1",
+          "projected_t": 603
+        },
+        {
+          "case": "smooth-n16-late",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "smooth-n16-late/eps0.001/selectswap-block3",
+          "projected_t": 2695
+        },
+        {
+          "case": "smooth-n16-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n16-late/eps0.01/selectswap-block3",
+          "projected_t": 2115
+        },
+        {
+          "case": "smooth-n4-early",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "smooth-n4-early/eps0.001/walsh-block0",
+          "projected_t": 900
+        },
+        {
+          "case": "smooth-n4-early",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n4-early/eps0.01/selectswap-block1",
+          "projected_t": 541
+        },
+        {
+          "case": "smooth-n4-late",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "smooth-n4-late/eps0.001/walsh-block0",
+          "projected_t": 900
+        },
+        {
+          "case": "smooth-n4-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n4-late/eps0.01/selectswap-block1",
+          "projected_t": 541
+        },
+        {
+          "case": "smooth-n8-mid",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "smooth-n8-mid/eps0.001/selectswap-block2",
+          "projected_t": 1519
+        },
+        {
+          "case": "smooth-n8-mid",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n8-mid/eps0.01/selectswap-block2",
+          "projected_t": 1107
+        }
+      ]
+    },
+    {
+      "slope": 4,
+      "offset": 10,
+      "winner_counts": {
+        "walsh": 2,
+        "selectswap": 14
+      },
+      "decisions": [
+        {
+          "case": "public-d3-n2-late",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "public-d3-n2-late/eps0.001/walsh-block0",
+          "projected_t": 462
+        },
+        {
+          "case": "public-d3-n2-late",
+          "tolerance": 0.01,
+          "winner": "walsh",
+          "candidate": "public-d3-n2-late/eps0.01/walsh-block0",
+          "projected_t": 364
+        },
+        {
+          "case": "public-d3-n4-early",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-early/eps0.001/selectswap-block2",
+          "projected_t": 1619
+        },
+        {
+          "case": "public-d3-n4-early",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-early/eps0.01/selectswap-block2",
+          "projected_t": 1177
+        },
+        {
+          "case": "public-d3-n4-mid",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-mid/eps0.001/selectswap-block2",
+          "projected_t": 1619
+        },
+        {
+          "case": "public-d3-n4-mid",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-mid/eps0.01/selectswap-block2",
+          "projected_t": 1177
+        },
+        {
+          "case": "public-d4-n2-late",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "public-d4-n2-late/eps0.001/selectswap-block1",
+          "projected_t": 1031
+        },
+        {
+          "case": "public-d4-n2-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d4-n2-late/eps0.01/selectswap-block1",
+          "projected_t": 673
+        },
+        {
+          "case": "smooth-n16-late",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "smooth-n16-late/eps0.001/selectswap-block3",
+          "projected_t": 2795
+        },
+        {
+          "case": "smooth-n16-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n16-late/eps0.01/selectswap-block3",
+          "projected_t": 2185
+        },
+        {
+          "case": "smooth-n4-early",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "smooth-n4-early/eps0.001/selectswap-block1",
+          "projected_t": 1031
+        },
+        {
+          "case": "smooth-n4-early",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n4-early/eps0.01/selectswap-block1",
+          "projected_t": 601
+        },
+        {
+          "case": "smooth-n4-late",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "smooth-n4-late/eps0.001/selectswap-block1",
+          "projected_t": 1031
+        },
+        {
+          "case": "smooth-n4-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n4-late/eps0.01/selectswap-block1",
+          "projected_t": 601
+        },
+        {
+          "case": "smooth-n8-mid",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "smooth-n8-mid/eps0.001/selectswap-block2",
+          "projected_t": 1619
+        },
+        {
+          "case": "smooth-n8-mid",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n8-mid/eps0.01/selectswap-block2",
+          "projected_t": 1177
+        }
+      ]
+    },
+    {
+      "slope": 4,
+      "offset": 20,
+      "winner_counts": {
+        "walsh": 2,
+        "selectswap": 14
+      },
+      "decisions": [
+        {
+          "case": "public-d3-n2-late",
+          "tolerance": 0.001,
+          "winner": "walsh",
+          "candidate": "public-d3-n2-late/eps0.001/walsh-block0",
+          "projected_t": 532
+        },
+        {
+          "case": "public-d3-n2-late",
+          "tolerance": 0.01,
+          "winner": "walsh",
+          "candidate": "public-d3-n2-late/eps0.01/walsh-block0",
+          "projected_t": 434
+        },
+        {
+          "case": "public-d3-n4-early",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-early/eps0.001/selectswap-block2",
+          "projected_t": 1719
+        },
+        {
+          "case": "public-d3-n4-early",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-early/eps0.01/selectswap-block2",
+          "projected_t": 1247
+        },
+        {
+          "case": "public-d3-n4-mid",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-mid/eps0.001/selectswap-block2",
+          "projected_t": 1719
+        },
+        {
+          "case": "public-d3-n4-mid",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d3-n4-mid/eps0.01/selectswap-block2",
+          "projected_t": 1247
+        },
+        {
+          "case": "public-d4-n2-late",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "public-d4-n2-late/eps0.001/selectswap-block1",
+          "projected_t": 1131
+        },
+        {
+          "case": "public-d4-n2-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "public-d4-n2-late/eps0.01/selectswap-block1",
+          "projected_t": 743
+        },
+        {
+          "case": "smooth-n16-late",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "smooth-n16-late/eps0.001/selectswap-block3",
+          "projected_t": 2895
+        },
+        {
+          "case": "smooth-n16-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n16-late/eps0.01/selectswap-block3",
+          "projected_t": 2255
+        },
+        {
+          "case": "smooth-n4-early",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "smooth-n4-early/eps0.001/selectswap-block1",
+          "projected_t": 1131
+        },
+        {
+          "case": "smooth-n4-early",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n4-early/eps0.01/selectswap-block1",
+          "projected_t": 661
+        },
+        {
+          "case": "smooth-n4-late",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "smooth-n4-late/eps0.001/selectswap-block1",
+          "projected_t": 1131
+        },
+        {
+          "case": "smooth-n4-late",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n4-late/eps0.01/selectswap-block1",
+          "projected_t": 661
+        },
+        {
+          "case": "smooth-n8-mid",
+          "tolerance": 0.001,
+          "winner": "selectswap",
+          "candidate": "smooth-n8-mid/eps0.001/selectswap-block2",
+          "projected_t": 1719
+        },
+        {
+          "case": "smooth-n8-mid",
+          "tolerance": 0.01,
+          "winner": "selectswap",
+          "candidate": "smooth-n8-mid/eps0.01/selectswap-block2",
+          "projected_t": 1247
+        }
+      ]
+    }
+  ]
+}

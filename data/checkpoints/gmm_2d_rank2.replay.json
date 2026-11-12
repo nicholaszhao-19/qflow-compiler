@@ -1,0 +1,9 @@
+{
+  "checkpoint": "data/checkpoints/gmm_2d_rank2.pt",
+  "seed": 42,
+  "model_state_bitwise_identical": true,
+  "final_loss_identical": true,
+  "validation_history_identical": true,
+  "elapsed_seconds": 3.347999267999967,
+  "note": "Deterministic CPU replay of original upstream trainer configuration; checkpoint tensor equality, not serialized container-byte equality."
+}

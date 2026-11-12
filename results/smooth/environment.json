@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "torch": "2.8.0+cpu",
+    "matplotlib": "3.10.8",
+    "qiskit": "2.2.2"
+  },
+  "checkpoint_sha256": "d8d4312ff56a28fb3a3bcd8c877e4176c4f98347013731f82f9cb510d46ead83",
+  "command": "scripts/run_smooth_flow.py",
+  "date_utc": "2026-11-05T23:43:09.943486+00:00",
+  "dtype": "float64 training and evaluation; complex128 evolution",
+  "threads": 1
+}

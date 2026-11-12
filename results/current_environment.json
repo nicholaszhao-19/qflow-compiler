@@ -1,0 +1,15 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.8.0+cpu",
+    "qiskit": "2.2.2",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pytest": "8.4.2",
+    "matplotlib": "3.10.8",
+    "setuptools": "84.2.1",
+    "scikit-learn": "1.8.0"
+  },
+  "execution_note": "Runtime reconstructed from previously installed pinned packages; fresh network dependency installation was not performed in this run."
+}

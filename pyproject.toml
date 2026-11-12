@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools==84.2.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "floworaclebench"
+version = "1"
+description = "Certified fixed-point quantum phase oracles and learned-flow resource benchmarks"
+requires-python = ">=3.12"
+dependencies = ["numpy==2.3.5", "scipy==1.17.0", "matplotlib==3.10.8", "qiskit==2.2.2", "torch==2.8.0", "scikit-learn==1.8.0", "threadpoolctl==3.6.0"]
+
+[project.optional-dependencies]
+test = ["pytest==8.4.2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "vendor/tnwf-paper/src"]
+addopts = "-ra"
+markers = ["needle: upstream regression marker"]
+

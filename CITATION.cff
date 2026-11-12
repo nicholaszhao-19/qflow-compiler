@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use QFlow Compiler, please cite this software and the relevant methods in THIRD_PARTY_NOTICES.md."
+type: software
+title: "QFlow Compiler"
+version: "1"
+authors:
+  - given-names: Nicholas
+    family-names: Zhao
+repository-code: "https://github.com/nicholaszhao-19/qflow-compiler"
+license: MIT
+abstract: "Reversible phase oracles for learned wavefunction flows, with circuit benchmarks for tensor trains, lookup and diagonal synthesis."

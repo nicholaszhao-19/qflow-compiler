@@ -1,0 +1,33 @@
+{
+  "checkpoint": "data/checkpoints/smooth_gmm.pt",
+  "time": 0.5,
+  "phase_multiplier": 0.2,
+  "grids": [
+    4,
+    8,
+    16,
+    32
+  ],
+  "rank_caps": [
+    1,
+    2,
+    4,
+    8,
+    11
+  ],
+  "fraction_bits": [
+    3,
+    5,
+    7,
+    9
+  ],
+  "matched_tolerances": [
+    0.01,
+    0.001
+  ],
+  "baseline_max_qubits": 4096,
+  "rotation_synthesis_budget": 0.0001,
+  "max_fraction_bits": 14,
+  "seed": 204,
+  "matched_search_all_ranks_through_architecture_bound": true
+}

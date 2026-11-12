@@ -1,0 +1,13 @@
+{
+  "checkpoint": "data/checkpoints/gmm_2d_rank4.pt",
+  "grids": [4, 8, 16, 32],
+  "steps": [16, 64, 256],
+  "balance_rules": ["paper", "spectral_range"],
+  "final_time": 1.0,
+  "rtol": 1e-10,
+  "atol": 1e-12,
+  "refined_rtol": 1e-11,
+  "refined_atol": 1e-13,
+  "periodic_image_radius": 1,
+  "blas_threads": 1
+}

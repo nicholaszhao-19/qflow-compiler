@@ -1,0 +1,254 @@
+{
+  "training_kind": "fresh training using public upstream JAM/MPS-V implementation",
+  "not_exact_paper_reproduction": "public trainer explicitly omits unpublished unitarity_weight regularizer",
+  "upstream_commit": "11358d3dca52193f93f037046229797296a2063e",
+  "upstream_url": "https://github.com/sygaldry-tech/tnwf-paper",
+  "config": {
+    "dataset": "gmm_2d",
+    "seed": 42,
+    "N": 16,
+    "D": 2,
+    "N_t": 8,
+    "n_iter": 2000,
+    "batch_size": 256,
+    "lr": 0.003,
+    "d": 2,
+    "L": 8.0,
+    "sigma0": 1.3333333333333333,
+    "n_samples": 12000,
+    "val_frac": 0.2,
+    "patience": 100,
+    "eval_every": 100,
+    "grad_clip": 5.0,
+    "loss_name": "jam",
+    "log_every": 200,
+    "torch_threads": 1,
+    "out_path": "data/checkpoints/gmm_2d_rank2.pt"
+  },
+  "checkpoint_args": {
+    "d": 2,
+    "N_grid": 16,
+    "D_mps": 2,
+    "L": 8.0,
+    "N_t": 8,
+    "dataset": "gmm_2d",
+    "seed": 42,
+    "loss_name": "jam",
+    "sigma_0": 1.3333333333333333,
+    "n_samples": 12000,
+    "n_iter": 2000,
+    "batch_size": 256,
+    "lr": 0.003,
+    "lr_schedule": null,
+    "sgdr_t0": 10000,
+    "lr_min": 0.0,
+    "patience": 100,
+    "val_frac": 0.2,
+    "grad_clip": 5.0,
+    "stopped_at": 2000,
+    "best_val": -2.442701578140259,
+    "std": 0.5,
+    "scale": 3.0,
+    "arrangement": "orthogonal",
+    "qtt": false
+  },
+  "final_training_loss": -2.432894819974899,
+  "validation_history": [
+    [
+      100,
+      -0.4383406937122345
+    ],
+    [
+      200,
+      -0.9023022651672363
+    ],
+    [
+      300,
+      -1.2316856384277344
+    ],
+    [
+      400,
+      -1.4946731328964233
+    ],
+    [
+      500,
+      -1.7532731294631958
+    ],
+    [
+      600,
+      -1.9531497955322266
+    ],
+    [
+      700,
+      -2.1116390228271484
+    ],
+    [
+      800,
+      -2.273468255996704
+    ],
+    [
+      900,
+      -2.345515251159668
+    ],
+    [
+      1000,
+      -2.3912744522094727
+    ],
+    [
+      1100,
+      -2.406406879425049
+    ],
+    [
+      1200,
+      -2.405143976211548
+    ],
+    [
+      1300,
+      -2.42055344581604
+    ],
+    [
+      1400,
+      -2.4236130714416504
+    ],
+    [
+      1500,
+      -2.430386781692505
+    ],
+    [
+      1600,
+      -2.422975778579712
+    ],
+    [
+      1700,
+      -2.429934024810791
+    ],
+    [
+      1800,
+      -2.434152364730835
+    ],
+    [
+      1900,
+      -2.442701578140259
+    ],
+    [
+      2000,
+      -2.4169013500213623
+    ]
+  ],
+  "elapsed_seconds": 3.331868665999991,
+  "python": "3.12.14",
+  "torch": "2.8.0+cpu",
+  "numpy": "2.3.5",
+  "checkpoint_sha256": "b2ed3f8d071dda76da392b1727a780dd60e36d4ddfb23ed0a3b80d277cc366f9",
+  "extraction_validation": [
+    {
+      "n": 4,
+      "t": 0.0,
+      "max_error": 5.602080053179748e-07,
+      "min_value": -15.11968886564132,
+      "max_value": 0.05907313186521812
+    },
+    {
+      "n": 4,
+      "t": 0.125,
+      "max_error": 5.240518632376734e-07,
+      "min_value": -9.696244669429582,
+      "max_value": -0.01937356042972294
+    },
+    {
+      "n": 4,
+      "t": 0.5,
+      "max_error": 1.0027043835236782e-06,
+      "min_value": 0.30672433917881003,
+      "max_value": 23.25547308787179
+    },
+    {
+      "n": 4,
+      "t": 0.875,
+      "max_error": 1.4410102622264276e-06,
+      "min_value": 0.6752177328765323,
+      "max_value": 34.84577034854052
+    },
+    {
+      "n": 4,
+      "t": 1.0,
+      "max_error": 9.862207619448782e-07,
+      "min_value": 0.3672074993269733,
+      "max_value": 34.41930672251947
+    },
+    {
+      "n": 8,
+      "t": 0.0,
+      "max_error": 5.842336339156873e-07,
+      "min_value": -15.11968886564132,
+      "max_value": 0.05907313186521812
+    },
+    {
+      "n": 8,
+      "t": 0.125,
+      "max_error": 6.817128506142467e-07,
+      "min_value": -9.696244669429582,
+      "max_value": -0.01937356042972294
+    },
+    {
+      "n": 8,
+      "t": 0.5,
+      "max_error": 1.5687122711938173e-06,
+      "min_value": 0.30672433917881003,
+      "max_value": 23.25547308787179
+    },
+    {
+      "n": 8,
+      "t": 0.875,
+      "max_error": 2.3913785831553014e-06,
+      "min_value": 0.6752177328765323,
+      "max_value": 34.84577034854052
+    },
+    {
+      "n": 8,
+      "t": 1.0,
+      "max_error": 1.301197471548221e-06,
+      "min_value": 0.3672074993269733,
+      "max_value": 34.41930672251947
+    },
+    {
+      "n": 16,
+      "t": 0.0,
+      "max_error": 6.440055271283995e-07,
+      "min_value": -15.11968886564132,
+      "max_value": 0.05907313186521812
+    },
+    {
+      "n": 16,
+      "t": 0.125,
+      "max_error": 7.695025185938675e-07,
+      "min_value": -9.696244669429582,
+      "max_value": -0.01937356042972294
+    },
+    {
+      "n": 16,
+      "t": 0.5,
+      "max_error": 1.582429277391384e-06,
+      "min_value": 0.30672433917881003,
+      "max_value": 23.25547308787179
+    },
+    {
+      "n": 16,
+      "t": 0.875,
+      "max_error": 2.3913785831553014e-06,
+      "min_value": 0.6752177328765323,
+      "max_value": 34.84577034854052
+    },
+    {
+      "n": 16,
+      "t": 1.0,
+      "max_error": 1.7446326801007217e-06,
+      "min_value": 0.3672074993269733,
+      "max_value": 34.41930672251947
+    }
+  ],
+  "grid": "x_j = -L/2 + j L/n; C-order spatial indices",
+  "potential_truth": "stored float32 model weights interpreted as real numbers; spatial and time interpolation/contraction evaluated float64",
+  "time_contraction": "float64 equivalent of upstream get_mps_cores algebra; avoids float32 time interpolation jitter in ODE references",
+  "precision_note": "No retraining or checkpoint modification. Extraction diagnostics refreshed after float64 evaluation change."
+}

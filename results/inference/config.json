@@ -1,0 +1,32 @@
+{
+  "checkpoint": "data/checkpoints/smooth_gmm.pt",
+  "potential_type": "smooth",
+  "grid": 16,
+  "steps": 64,
+  "time_refinement_steps": [
+    32,
+    64,
+    128
+  ],
+  "final_time": 1.0,
+  "event_lower_index": 10,
+  "depths": [
+    0,
+    1,
+    2,
+    4,
+    8
+  ],
+  "shots_per_depth": 64,
+  "independent_repetitions": 256,
+  "seed": 20261105,
+  "total_rotation_synthesis_budget": 0.001,
+  "tensor_ranks": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "classical_particle_count": 4096
+}

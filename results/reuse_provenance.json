@@ -1,0 +1,63 @@
+{
+  "prior_workspace": "FlowOracleBench-v0.1.0",
+  "original_source_files": [
+    {
+      "path": "src/floworaclebench/__init__.py",
+      "sha256": "ea34fa9f3f274a7f75f4b740ebf6869a56c6a88830e6aaf239d5d15504dac9e0"
+    },
+    {
+      "path": "src/floworaclebench/baselines.py",
+      "sha256": "2e4b47e6b1ba1ca0931c9a477109f098cad47f461a15645b28761c67b3855301"
+    },
+    {
+      "path": "src/floworaclebench/benchmark.py",
+      "sha256": "156670121d6d324db92f4d1248b6c6b6c0d0b39040598f95b9f25661b9978958"
+    },
+    {
+      "path": "src/floworaclebench/evolution.py",
+      "sha256": "d7103580454f13a0a056dcfbc7e801e8069699235f087c9c5dfea033d44acf41"
+    },
+    {
+      "path": "src/floworaclebench/flow_benchmark.py",
+      "sha256": "4b36fbf56aea5328ee63eefee2f3e3728107a0f5716a39fb5099ee5901a0d52f"
+    },
+    {
+      "path": "src/floworaclebench/potentials.py",
+      "sha256": "2a3261494038a3031e45cccaabaa767273557558f3d2ffe24726948359fbf92c"
+    },
+    {
+      "path": "src/floworaclebench/resources.py",
+      "sha256": "d8c05bdb87dcaf5e830a0d899f6bf77d1bc3f9c5cfe0acaa67efac1e2c3ad76a"
+    },
+    {
+      "path": "src/floworaclebench/reversible.py",
+      "sha256": "440d908b98224581574dea8effb709d7b0ac20dea14174b2ba61282af875bb71"
+    },
+    {
+      "path": "src/floworaclebench/selectswap.py",
+      "sha256": "c814c3902b8b17059b18d7481439c840a98916de76839dfbee98c63230a14832"
+    },
+    {
+      "path": "src/floworaclebench/simulation.py",
+      "sha256": "259821263ded025fc79c464aac4d3cd7e7aa5f80e3aba69fa62124d01c28d882"
+    }
+  ],
+  "prior_step4_zip_sha256": "0c58b7ef8528e0af4c4c28168b93c23354d259fc5d31aeb0673731cd726dfbd3",
+  "reused_components": [
+    "signed reversible TT arithmetic",
+    "coherent shared-prefix QROM",
+    "SelectSwap",
+    "Walsh phase synthesis",
+    "Qiskit Gaussian and kinetic preparation",
+    "gate-path verification",
+    "upstream pinned source and licenses",
+    "original 103-test suite"
+  ],
+  "new_work": [
+    "smooth scalar CFM nonproduct Gaussian mixture",
+    "same-potential ODE and Fourier convergence",
+    "TT-SVD rank and precision measurements on new learned potential",
+    "compiled amplitude-estimation inference"
+  ],
+  "old_results_note": "The v0.1 tables describe the original MPS-V experiment. The v0.2 measurements are in results/smooth, results/oracle-study and results/inference."
+}

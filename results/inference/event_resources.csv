@@ -1,0 +1,6 @@
+observable,method,marked_addresses,operator_error,logical_qubits,address_qubits,ancilla_qubits,gate_count,native_depth,cx,ccx,rccx,single_qubit_gates,cnot_decomposed,arbitrary_rotations,t_count_estimate,t_depth_macro_estimate,rotation_error_budget,per_rotation_error,rotation_model_slope,rotation_model_offset,native_gate_counts,selection_seed
+two_coordinate_box,coordinate_prefix,36,4.508989933144315e-15,8,8,0,263,191,96,2,0,165,108,15,1344,1058,1e-06,6.666666666666667e-08,3.0,10,"{""p"": 115, ""cx"": 96, ""h"": 38, ""x"": 12, ""ccx"": 2}",
+two_coordinate_box,Walsh_mask,36,3.5596458096434965e-15,8,8,0,125,114,62,0,0,63,62,63,5544,4840,1e-06,1.5873015873015872e-08,3.0,10,"{""rz"": 63, ""cx"": 62}",
+one_coordinate_tail,coordinate_prefix,96,,8,8,0,6,5,1,1,0,4,7,0,7,4,1e-06,1e-06,3.0,10,"{""x"": 2, ""h"": 2, ""ccx"": 1, ""cx"": 1}",
+one_coordinate_tail,Walsh_mask,96,,8,8,0,13,11,6,0,0,7,6,0,7,5,1e-06,1e-06,3.0,10,"{""rz"": 7, ""cx"": 6}",
+seeded_irregular_mask_same_support_size,Walsh_mask,36,,8,8,0,466,452,250,0,0,216,250,216,20304,19552,1e-06,4.6296296296296295e-09,3.0,10,"{""cx"": 250, ""rz"": 216}",20261204

@@ -1,0 +1,22 @@
+{
+  "checkpoints": {
+    "smooth_cfm_gmm": "data/checkpoints/smooth_gmm.pt",
+    "sygaldry_public_slice": "vendor/tnwf-paper/examples/checkpoints/mps_v_gmm_d8.pt"
+  },
+  "steps": 64,
+  "balance_samples": 17,
+  "tolerances": [0.01, 0.001],
+  "max_core_fraction_bits": 15,
+  "logical_qubit_caps": [16, 32, 64, 128, 256, 512],
+  "cases": [
+    {"case": "smooth-n4-early", "dataset": "smooth_cfm_gmm", "dimension": 2, "grid": 4, "step_index": 0, "rank_caps": [1, 2, 4], "precision_sweep_bits": [2, 4, 6, 8]},
+    {"case": "smooth-n4-late", "dataset": "smooth_cfm_gmm", "dimension": 2, "grid": 4, "step_index": 63, "rank_caps": [1, 2, 4]},
+    {"case": "smooth-n8-mid", "dataset": "smooth_cfm_gmm", "dimension": 2, "grid": 8, "step_index": 31, "rank_caps": [2, 4, 8], "gauge_ablation": true},
+    {"case": "smooth-n16-late", "dataset": "smooth_cfm_gmm", "dimension": 2, "grid": 16, "step_index": 63, "rank_caps": [4, 8, 11]},
+    {"case": "public-d3-n4-early", "dataset": "sygaldry_public_slice", "dimension": 3, "grid": 4, "step_index": 0, "rank_caps": [1, 2, 4], "fixed_indices": [1, 2, 3, 1, 2]},
+    {"case": "public-d3-n4-mid", "dataset": "sygaldry_public_slice", "dimension": 3, "grid": 4, "step_index": 31, "rank_caps": [1, 2, 4], "fixed_indices": [1, 2, 3, 1, 2], "gauge_ablation": true},
+    {"case": "public-d3-n2-late", "dataset": "sygaldry_public_slice", "dimension": 3, "grid": 2, "step_index": 63, "rank_caps": [1, 2], "fixed_indices": [0, 0, 1, 0, 1], "compare_native_rank": true},
+    {"case": "public-d4-n2-late", "dataset": "sygaldry_public_slice", "dimension": 4, "grid": 2, "step_index": 63, "rank_caps": [1, 2, 4], "fixed_indices": [0, 1, 0, 1]}
+  ],
+  "workspace_ablation": {"seed": 490, "dimension": 4, "grid": 2, "rank": 5, "scale": 0.7, "core_fraction_bits": 5, "stage_fraction_cap": 8, "beta": 0.125, "tolerance": 0.04, "synthesis_budget": 0.0001}
+}

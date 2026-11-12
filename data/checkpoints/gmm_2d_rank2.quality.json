@@ -1,0 +1,24 @@
+{
+  "checkpoint": "data/checkpoints/gmm_2d_rank2.pt",
+  "dimension": 2,
+  "samples": 2048,
+  "seed": 1729,
+  "rk4_steps": [
+    128,
+    256
+  ],
+  "sw_projections": 200,
+  "fresh_pair_jam_loss": -2.3412492275238037,
+  "velocity_mse_against_conditional_gaussian_bridge": 0.5609905409023486,
+  "zero_velocity_mse_against_conditional_gaussian_bridge": 5.197147448936111,
+  "source_target_sw1": 0.8913600856403383,
+  "learned_ode_target_sw1": 0.19986811609064695,
+  "learned_ode_coarse_target_sw1": 0.19695075069549703,
+  "target_target_sw1_sample_floor": 0.037431964378897974,
+  "rk4_refinement_particle_rms": 0.22321994602680206,
+  "source_outside_box_fraction": 0.00439453125,
+  "target_outside_box_fraction": 0.0244140625,
+  "ode_outside_box_fraction": 0.05126953125,
+  "elapsed_seconds": 1.61800038399997,
+  "interpretation": "Classical training diagnostics only. The analytic bridge is unbounded; the learned model is periodic. Low-resolution quantum-grid dynamics need not match this particle ODE. RK4 refinement is empirical, not a rigorous continuum error bound."
+}

@@ -1,0 +1,11 @@
+{
+  "cases": [{"grid": 4, "steps": 16}, {"grid": 8, "steps": 64}],
+  "checkpoint": "data/checkpoints/smooth_gmm.pt",
+  "native_potential_budget": 0.01,
+  "preparation_synthesis_budget": 0.001,
+  "repeated_synthesis_budget": 0.001,
+  "amplification_depths": [0, 1, 2, 4, 8],
+  "shots_per_depth": 64,
+  "classical_particles": 4096,
+  "seed": 20261106
+}

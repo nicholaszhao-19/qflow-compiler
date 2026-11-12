@@ -1,0 +1,21 @@
+{
+  "seed": 42,
+  "steps": 2500,
+  "batch_size": 1024,
+  "learning_rate": 0.002,
+  "hidden_width": 48,
+  "max_mode": 5,
+  "length": 12.0,
+  "sigma0": 1.0,
+  "target_std": 0.55,
+  "mean_offset": 1.25,
+  "weights": [0.4, 0.1, 0.1, 0.4],
+  "coefficient_penalty": 1e-5,
+  "threads": 1,
+  "samples": 4096,
+  "grids": [8, 16, 32, 64],
+  "particle_steps": 128,
+  "density_steps": 128,
+  "formula_steps": [32, 64, 128, 256, 512],
+  "formula_grid": 16
+}

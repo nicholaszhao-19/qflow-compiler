@@ -1,0 +1,23 @@
+.venv*/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.DS_Store
+tmp/
+vendor/tnwf-paper/.git/
+
+# Local credentials, analysis caches, and private reports
+.env
+.env.*
+*.pem
+*.key
+.ruff_cache/
+.mypy_cache/
+/report/
+
+# Generated diagnostics
+results/**/*.log
+results/smooth/metrics_partial.json

@@ -1,0 +1,409 @@
+{
+  "config": {
+    "seed": 42,
+    "steps": 2500,
+    "batch_size": 1024,
+    "learning_rate": 0.002,
+    "hidden_width": 48,
+    "max_mode": 5,
+    "length": 12.0,
+    "sigma0": 1.0,
+    "target_std": 0.55,
+    "mean_offset": 1.25,
+    "weights": [
+      0.4,
+      0.1,
+      0.1,
+      0.4
+    ],
+    "coefficient_penalty": 1e-05,
+    "threads": 1,
+    "samples": 4096,
+    "grids": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "particle_steps": 128,
+    "density_steps": 128,
+    "formula_steps": [
+      32,
+      64,
+      128,
+      256,
+      512
+    ],
+    "formula_grid": 16
+  },
+  "checkpoint_sha256": "d8d4312ff56a28fb3a3bcd8c877e4176c4f98347013731f82f9cb510d46ead83",
+  "heldout": {
+    "n": 16384,
+    "seed": 1907,
+    "learned_cfm_mse": 3.9140697417571646,
+    "zero_velocity_cfm_mse": 5.775022014837162,
+    "analytic_conditional_cfm_mse": 3.8960087512660233,
+    "conditional_velocity_rmse": 0.1275528716670361,
+    "conditional_velocity_relative_rms": 0.09361539281239681
+  },
+  "boundary": {
+    "domain": [
+      -6.0,
+      6.0
+    ],
+    "periodic_potential": true,
+    "smoothness": "finite Fourier features and tanh time MLP, C-infinity",
+    "source_outside_euclidean_box_probability": 3.9463505762573574e-09,
+    "target_outside_euclidean_box_probability_float": 0.0,
+    "target_outside_euclidean_box_union_bound": 5.803059470553063e-18,
+    "periodized_vs_plain_grid_initial_state_l2": {
+      "8": 5.591423545002964e-05,
+      "16": 3.954351708443963e-05,
+      "32": 2.80056747552726e-05,
+      "64": 2.070280661515604e-05
+    },
+    "periodic_images_per_axis": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "omitted_source_images_minimum_distance": 30.0,
+    "omitted_source_images_probability_upper_bound": 1.9626855708591632e-197,
+    "interpretation": "Training is Euclidean CFM; continuum validation is the learned periodic flow of a wrapped Gaussian. Model error is measured separately."
+  },
+  "hermiticity_frobenius_error_n8": 6.759698457714391e-16,
+  "particles": {
+    "n": 4096,
+    "coarse_steps": 64,
+    "fine_steps": 128,
+    "rk4_refinement_rms_endpoint_change": 2.6745564164853394e-08,
+    "rk4_refinement_max_endpoint_change": 7.566501651077549e-08,
+    "sliced_w1_source_target": 0.4126811617260011,
+    "sliced_w1_learned_target": 0.03380256861873995,
+    "sliced_w1_independent_target_floor": 0.029176751043645355,
+    "outside_box_sample_count": 0,
+    "seconds_including_metrics": 2.7405640780016256,
+    "interpretation": "one seeded training run; empirical sliced W1 over 128 fixed directions, not population TV"
+  },
+  "grids": [
+    {
+      "n": 8,
+      "density": {
+        "seconds": 0.0885200150005403,
+        "steps": 128,
+        "maximum_absolute_log_jacobian": 2.090066433530756
+      },
+      "wavefunction": {
+        "method": "DOP853_FFT",
+        "seconds": 0.05297283899926697,
+        "n": 8,
+        "rtol": 1e-10,
+        "atol": 1e-12,
+        "nfev": 278,
+        "solver_steps": 20,
+        "norm_drift": 1.4660495040175192e-12
+      },
+      "classical_density_quadrature_mass": 1.5292961682356385,
+      "target_density_quadrature_mass": 1.1456637065544397,
+      "wave_vs_classical_tv": 0.25497376884414125,
+      "classical_model_vs_target_tv": 0.09148159592842414,
+      "wave_vs_target_tv": 0.31669557232159007,
+      "wave_vs_classical_sqrt_state": {
+        "fidelity": 0.9133793177900292,
+        "tv_distance": 0.2549737688441413,
+        "state_l2_error": 0.29762794268126247,
+        "phase_aligned_l2_error": 0.29762794268148063,
+        "actual_norm": 0.999999999998534,
+        "reference_norm": 1.0
+      },
+      "born_raw_vs_unnormalized_density_l1": 0.718657625534358
+    },
+    {
+      "n": 16,
+      "density": {
+        "seconds": 0.25828593900223495,
+        "steps": 128,
+        "maximum_absolute_log_jacobian": 2.090066433530756
+      },
+      "wavefunction": {
+        "method": "DOP853_FFT",
+        "seconds": 0.058492153002589475,
+        "n": 16,
+        "rtol": 1e-10,
+        "atol": 1e-12,
+        "nfev": 290,
+        "solver_steps": 24,
+        "norm_drift": 3.740341369962152e-12
+      },
+      "classical_density_quadrature_mass": 1.006545456442559,
+      "target_density_quadrature_mass": 0.9999509255945493,
+      "wave_vs_classical_tv": 0.09923759212848901,
+      "classical_model_vs_target_tv": 0.13768152467257216,
+      "wave_vs_target_tv": 0.06393263600798332,
+      "wave_vs_classical_sqrt_state": {
+        "fidelity": 0.9849755422339661,
+        "tv_distance": 0.09923759212848897,
+        "state_l2_error": 0.12280602311792777,
+        "phase_aligned_l2_error": 0.1228060231181574,
+        "actual_norm": 0.9999999999962597,
+        "reference_norm": 1.0
+      },
+      "born_raw_vs_unnormalized_density_l1": 0.19744452262602058
+    },
+    {
+      "n": 32,
+      "density": {
+        "seconds": 0.9545506909998949,
+        "steps": 128,
+        "maximum_absolute_log_jacobian": 2.198855484563364
+      },
+      "wavefunction": {
+        "method": "DOP853_FFT",
+        "seconds": 0.0698458600018057,
+        "n": 32,
+        "rtol": 1e-10,
+        "atol": 1e-12,
+        "nfev": 326,
+        "solver_steps": 26,
+        "norm_drift": 9.732437078469047e-12
+      },
+      "classical_density_quadrature_mass": 1.0000297981377735,
+      "target_density_quadrature_mass": 1.0,
+      "wave_vs_classical_tv": 0.009635682327088863,
+      "classical_model_vs_target_tv": 0.11614935078425662,
+      "wave_vs_target_tv": 0.11468810193701195,
+      "wave_vs_classical_sqrt_state": {
+        "fidelity": 0.9998108670167372,
+        "tv_distance": 0.009635682327088772,
+        "state_l2_error": 0.013752887948694593,
+        "phase_aligned_l2_error": 0.01375288794876152,
+        "actual_norm": 0.9999999999902676,
+        "reference_norm": 0.9999999999999996
+      },
+      "born_raw_vs_unnormalized_density_l1": 0.019268044675020572
+    },
+    {
+      "n": 64,
+      "density": {
+        "seconds": 3.6575923470009,
+        "steps": 128,
+        "maximum_absolute_log_jacobian": 2.2506723383159044
+      },
+      "wavefunction": {
+        "method": "DOP853_FFT",
+        "seconds": 0.13576018599997042,
+        "n": 64,
+        "rtol": 1e-10,
+        "atol": 1e-12,
+        "nfev": 326,
+        "solver_steps": 25,
+        "norm_drift": 1.5728307545259668e-11
+      },
+      "classical_density_quadrature_mass": 1.0000013704609765,
+      "target_density_quadrature_mass": 1.0,
+      "wave_vs_classical_tv": 0.0002788527962069143,
+      "classical_model_vs_target_tv": 0.11622491349283823,
+      "wave_vs_target_tv": 0.11623129998741819,
+      "wave_vs_classical_sqrt_state": {
+        "fidelity": 0.999999710040215,
+        "tv_distance": 0.0002788527962068854,
+        "state_l2_error": 0.0005384791591129048,
+        "phase_aligned_l2_error": 0.0005384791591171402,
+        "actual_norm": 0.9999999999842717,
+        "reference_norm": 1.0
+      },
+      "born_raw_vs_unnormalized_density_l1": 0.0005576365783013951,
+      "density_refinement": {
+        "metadata": {
+          "seconds": 7.264939450000384,
+          "steps": 256,
+          "maximum_absolute_log_jacobian": 2.2506723404033004
+        },
+        "raw_grid_l1": 1.3305604221931989e-09,
+        "normalized_tv": 6.632306573688707e-10,
+        "mass": 1.0000013702563006
+      },
+      "wave_solver_refinement": {
+        "metadata": {
+          "method": "DOP853_FFT",
+          "seconds": 0.17012425199936843,
+          "n": 64,
+          "rtol": 1e-11,
+          "atol": 1e-13,
+          "nfev": 398,
+          "solver_steps": 33,
+          "norm_drift": 1.333155807969888e-12
+        },
+        "metrics": {
+          "fidelity": 1.0,
+          "tv_distance": 3.0135737557443276e-10,
+          "state_l2_error": 5.004463815067892e-10,
+          "phase_aligned_l2_error": 5.002392802778475e-10,
+          "actual_norm": 0.9999999999842717,
+          "reference_norm": 0.9999999999986668
+        }
+      }
+    }
+  ],
+  "spatial_refinement": [
+    {
+      "old_n": 8,
+      "new_n": 16,
+      "interpolation": "Fourier resample; includes normalized-grid amplitude factor",
+      "metrics": {
+        "fidelity": 0.9153662336917979,
+        "tv_distance": 0.23543954461142758,
+        "state_l2_error": 0.29325639675550136,
+        "phase_aligned_l2_error": 0.2941165151735825,
+        "actual_norm": 0.9937010587139637,
+        "reference_norm": 0.9999999999962597
+      }
+    },
+    {
+      "old_n": 16,
+      "new_n": 32,
+      "interpolation": "Fourier resample; includes normalized-grid amplitude factor",
+      "metrics": {
+        "fidelity": 0.988281197955809,
+        "tv_distance": 0.08537061925831492,
+        "state_l2_error": 0.10840822606679962,
+        "phase_aligned_l2_error": 0.10841280956827087,
+        "actual_norm": 0.9999148281341025,
+        "reference_norm": 0.9999999999902676
+      }
+    },
+    {
+      "old_n": 32,
+      "new_n": 64,
+      "interpolation": "Fourier resample; includes normalized-grid amplitude factor",
+      "metrics": {
+        "fidelity": 0.9998489172582563,
+        "tv_distance": 0.008734560298928502,
+        "state_l2_error": 0.012291800393239695,
+        "phase_aligned_l2_error": 0.012291804126018024,
+        "actual_norm": 0.9999993901941897,
+        "reference_norm": 0.9999999999842717
+      }
+    }
+  ],
+  "product_formula": [
+    {
+      "seconds": 0.009618331001547631,
+      "n": 16,
+      "steps": 32,
+      "potential_blocks": 128,
+      "kinetic_blocks": 128,
+      "maximum_norm_drift": 5.10702591327572e-15,
+      "alpha_range": [
+        0.03179240846689529,
+        0.06139883871635161
+      ],
+      "beta_range": [
+        0.25448364051613215,
+        0.49146952852816916
+      ],
+      "native_rotations": "exact floating-point phase exponentials; not Clifford+T synthesis",
+      "fidelity": 0.9997372757939083,
+      "tv_distance": 0.010245832497697773,
+      "state_l2_error": 0.016235902108796097,
+      "phase_aligned_l2_error": 0.016209301785122077,
+      "actual_norm": 1.000000000000005,
+      "reference_norm": 0.9999999999962597
+    },
+    {
+      "seconds": 0.022417321997636463,
+      "n": 16,
+      "steps": 64,
+      "potential_blocks": 256,
+      "kinetic_blocks": 256,
+      "maximum_norm_drift": 1.176836406102666e-14,
+      "alpha_range": [
+        0.022120073579291247,
+        0.043670874850155555
+      ],
+      "beta_range": [
+        0.1788949735219736,
+        0.35318598611326685
+      ],
+      "native_rotations": "exact floating-point phase exponentials; not Clifford+T synthesis",
+      "fidelity": 0.9999304787036566,
+      "tv_distance": 0.005209658698705091,
+      "state_l2_error": 0.008344767941249422,
+      "phase_aligned_l2_error": 0.008338015632522462,
+      "actual_norm": 1.0000000000000118,
+      "reference_norm": 0.9999999999962597
+    },
+    {
+      "seconds": 0.03770512399933068,
+      "n": 16,
+      "steps": 128,
+      "potential_blocks": 512,
+      "kinetic_blocks": 512,
+      "maximum_norm_drift": 2.375877272697835e-14,
+      "alpha_range": [
+        0.015509842796826365,
+        0.030967342887644845
+      ],
+      "beta_range": [
+        0.12614094835881096,
+        0.25185619552503136
+      ],
+      "native_rotations": "exact floating-point phase exponentials; not Clifford+T synthesis",
+      "fidelity": 0.9999820842689451,
+      "tv_distance": 0.0026266177872263635,
+      "state_l2_error": 0.004234405856855999,
+      "phase_aligned_l2_error": 0.004232707325016219,
+      "actual_norm": 1.0000000000000238,
+      "reference_norm": 0.9999999999962597
+    },
+    {
+      "seconds": 0.07893812800102751,
+      "n": 16,
+      "steps": 256,
+      "potential_blocks": 1024,
+      "kinetic_blocks": 1024,
+      "maximum_norm_drift": 4.796163466380676e-14,
+      "alpha_range": [
+        0.01098758634172177,
+        0.02192759540819851
+      ],
+      "beta_range": [
+        0.08907155406879433,
+        0.17775741998801373
+      ],
+      "native_rotations": "exact floating-point phase exponentials; not Clifford+T synthesis",
+      "fidelity": 0.9999954510291452,
+      "tv_distance": 0.0013225929695141027,
+      "state_l2_error": 0.0021332586846154137,
+      "phase_aligned_l2_error": 0.002132832864548777,
+      "actual_norm": 1.000000000000048,
+      "reference_norm": 0.9999999999962597
+    },
+    {
+      "seconds": 0.14933041999756824,
+      "n": 16,
+      "steps": 512,
+      "potential_blocks": 2048,
+      "kinetic_blocks": 2048,
+      "maximum_norm_drift": 9.14823772291129e-14,
+      "alpha_range": [
+        0.007753540791131709,
+        0.015515800728299303
+      ],
+      "beta_range": [
+        0.06293987123841088,
+        0.12595052071138463
+      ],
+      "native_rotations": "exact floating-point phase exponentials; not Clifford+T synthesis",
+      "fidelity": 0.9999988536947338,
+      "tv_distance": 0.0006635880440861063,
+      "state_l2_error": 0.0010707632107174547,
+      "phase_aligned_l2_error": 0.0010706566183965645,
+      "actual_norm": 1.0000000000000915,
+      "reference_norm": 0.9999999999962597
+    }
+  ],
+  "seconds_total": 15.846542944000248
+}

@@ -1,0 +1,294 @@
+{
+  "training_kind": "fresh training using public upstream JAM/MPS-V implementation",
+  "not_exact_paper_reproduction": "public trainer explicitly omits unpublished unitarity_weight regularizer",
+  "upstream_commit": "11358d3dca52193f93f037046229797296a2063e",
+  "upstream_url": "https://github.com/sygaldry-tech/tnwf-paper",
+  "config": {
+    "dataset": "gmm_2d",
+    "seed": 42,
+    "N": 16,
+    "D": 4,
+    "N_t": 8,
+    "n_iter": 3000,
+    "batch_size": 256,
+    "lr": 0.003,
+    "d": 2,
+    "L": 8.0,
+    "sigma0": 1.3333333333333333,
+    "n_samples": 12000,
+    "val_frac": 0.2,
+    "patience": 100,
+    "eval_every": 100,
+    "grad_clip": 5.0,
+    "loss_name": "jam",
+    "log_every": 200,
+    "torch_threads": 1,
+    "out_path": "data/checkpoints/gmm_2d_rank4.pt"
+  },
+  "checkpoint_args": {
+    "d": 2,
+    "N_grid": 16,
+    "D_mps": 4,
+    "L": 8.0,
+    "N_t": 8,
+    "dataset": "gmm_2d",
+    "seed": 42,
+    "loss_name": "jam",
+    "sigma_0": 1.3333333333333333,
+    "n_samples": 12000,
+    "n_iter": 3000,
+    "batch_size": 256,
+    "lr": 0.003,
+    "lr_schedule": null,
+    "sgdr_t0": 10000,
+    "lr_min": 0.0,
+    "patience": 100,
+    "val_frac": 0.2,
+    "grad_clip": 5.0,
+    "stopped_at": 3000,
+    "best_val": -2.554511308670044,
+    "std": 0.5,
+    "scale": 3.0,
+    "arrangement": "orthogonal",
+    "qtt": false
+  },
+  "final_training_loss": -2.620592077970505,
+  "validation_history": [
+    [
+      100,
+      -0.7146929502487183
+    ],
+    [
+      200,
+      -1.239928126335144
+    ],
+    [
+      300,
+      -1.6813064813613892
+    ],
+    [
+      400,
+      -2.0866177082061768
+    ],
+    [
+      500,
+      -2.334155797958374
+    ],
+    [
+      600,
+      -2.379479169845581
+    ],
+    [
+      700,
+      -2.403339385986328
+    ],
+    [
+      800,
+      -2.4302546977996826
+    ],
+    [
+      900,
+      -2.4286327362060547
+    ],
+    [
+      1000,
+      -2.435030937194824
+    ],
+    [
+      1100,
+      -2.436021566390991
+    ],
+    [
+      1200,
+      -2.4375553131103516
+    ],
+    [
+      1300,
+      -2.479635000228882
+    ],
+    [
+      1400,
+      -2.477177619934082
+    ],
+    [
+      1500,
+      -2.509384870529175
+    ],
+    [
+      1600,
+      -2.5093114376068115
+    ],
+    [
+      1700,
+      -2.506437063217163
+    ],
+    [
+      1800,
+      -2.518627166748047
+    ],
+    [
+      1900,
+      -2.522782564163208
+    ],
+    [
+      2000,
+      -2.5373427867889404
+    ],
+    [
+      2100,
+      -2.5305604934692383
+    ],
+    [
+      2200,
+      -2.5326898097991943
+    ],
+    [
+      2300,
+      -2.5380873680114746
+    ],
+    [
+      2400,
+      -2.5519187450408936
+    ],
+    [
+      2500,
+      -2.547727108001709
+    ],
+    [
+      2600,
+      -2.530776023864746
+    ],
+    [
+      2700,
+      -2.5436315536499023
+    ],
+    [
+      2800,
+      -2.5358479022979736
+    ],
+    [
+      2900,
+      -2.554511308670044
+    ],
+    [
+      3000,
+      -2.5497517585754395
+    ]
+  ],
+  "elapsed_seconds": 4.955973677999964,
+  "python": "3.12.14",
+  "torch": "2.8.0+cpu",
+  "numpy": "2.3.5",
+  "checkpoint_sha256": "1790e269f42b2c07c947864e38b38963d5761bd70fddb455cfcee78750c03880",
+  "extraction_validation": [
+    {
+      "n": 4,
+      "t": 0.0,
+      "max_error": 1.2798370825350958e-06,
+      "min_value": -21.825909259037115,
+      "max_value": -1.4885696565829074
+    },
+    {
+      "n": 4,
+      "t": 0.125,
+      "max_error": 3.8730481399795735e-07,
+      "min_value": -15.670803641665158,
+      "max_value": -1.1449573352199944
+    },
+    {
+      "n": 4,
+      "t": 0.5,
+      "max_error": 1.2459651568264007e-06,
+      "min_value": -1.4813970353307948,
+      "max_value": 12.737210960347385
+    },
+    {
+      "n": 4,
+      "t": 0.875,
+      "max_error": 1.9567887648008764e-06,
+      "min_value": 0.337687260726643,
+      "max_value": 30.385692546995415
+    },
+    {
+      "n": 4,
+      "t": 1.0,
+      "max_error": 1.3753851888509416e-06,
+      "min_value": 1.202068311918498,
+      "max_value": 27.762637128825094
+    },
+    {
+      "n": 8,
+      "t": 0.0,
+      "max_error": 1.3096059738870736e-06,
+      "min_value": -21.825909259037115,
+      "max_value": -1.4885696565829074
+    },
+    {
+      "n": 8,
+      "t": 0.125,
+      "max_error": 1.5524165100089249e-06,
+      "min_value": -15.670803641665158,
+      "max_value": -1.1449573352199944
+    },
+    {
+      "n": 8,
+      "t": 0.5,
+      "max_error": 1.2459651568264007e-06,
+      "min_value": -1.4813970353307948,
+      "max_value": 12.737210960347385
+    },
+    {
+      "n": 8,
+      "t": 0.875,
+      "max_error": 2.2215014308102354e-06,
+      "min_value": 0.337687260726643,
+      "max_value": 30.385692546995415
+    },
+    {
+      "n": 8,
+      "t": 1.0,
+      "max_error": 2.012752425173403e-06,
+      "min_value": 1.202068311918498,
+      "max_value": 27.762637128825094
+    },
+    {
+      "n": 16,
+      "t": 0.0,
+      "max_error": 1.9020444135264825e-06,
+      "min_value": -21.825909259037115,
+      "max_value": -1.4866186844622757
+    },
+    {
+      "n": 16,
+      "t": 0.125,
+      "max_error": 1.5524165100089249e-06,
+      "min_value": -15.670803641665158,
+      "max_value": -1.1297889276781738
+    },
+    {
+      "n": 16,
+      "t": 0.5,
+      "max_error": 1.541243404901138e-06,
+      "min_value": -1.4813970353307948,
+      "max_value": 12.737210960347385
+    },
+    {
+      "n": 16,
+      "t": 0.875,
+      "max_error": 2.54072889660506e-06,
+      "min_value": 0.337687260726643,
+      "max_value": 30.385692546995415
+    },
+    {
+      "n": 16,
+      "t": 1.0,
+      "max_error": 2.012752425173403e-06,
+      "min_value": 1.202068311918498,
+      "max_value": 27.762637128825094
+    }
+  ],
+  "grid": "x_j = -L/2 + j L/n; C-order spatial indices",
+  "potential_truth": "stored float32 model weights interpreted as real numbers; spatial and time interpolation/contraction evaluated float64",
+  "time_contraction": "float64 equivalent of upstream get_mps_cores algebra; avoids float32 time interpolation jitter in ODE references",
+  "precision_note": "No retraining or checkpoint modification. Extraction diagnostics refreshed after float64 evaluation change."
+}

@@ -1,0 +1,7 @@
+{
+  "QPY_roundtrip_native_statevector_l2_difference": 0.0,
+  "QPY_roundtrip_gate_count": 186312,
+  "QPY_roundtrip_seconds": 5.590318949001812,
+  "command": ".venv/bin/python: qpy.load prepared_flow.qpy; Statevector.from_instruction; compare saved prepared_state",
+  "tensor_postprocessing": "explicit normalization removes ~5.6e-13 norm drift; full-rank discarded weight is zero"
+}

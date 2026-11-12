@@ -1,0 +1,22 @@
+{
+  "dataset": "gmm_4d",
+  "seed": 42,
+  "out_path": "data/checkpoints/gmm_4d_rank2.pt",
+  "N": 16,
+  "D": 2,
+  "N_t": 8,
+  "n_iter": 3000,
+  "batch_size": 256,
+  "lr": 0.003,
+  "d": 4,
+  "L": 8.0,
+  "sigma0": 1.3333333333333333,
+  "n_samples": 12000,
+  "val_frac": 0.2,
+  "patience": 100,
+  "eval_every": 100,
+  "grad_clip": 5.0,
+  "loss_name": "jam",
+  "log_every": 200,
+  "torch_threads": 1
+}

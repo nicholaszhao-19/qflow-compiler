@@ -1,0 +1,7 @@
+{
+  "seconds": 14.76977383600024,
+  "train_pairs": 2560000,
+  "parameters": 5484,
+  "objective": "sampled independent-pair linear CFM + coefficient L2 penalty",
+  "uses_analytic_teacher_for_training": false
+}

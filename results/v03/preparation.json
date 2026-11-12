@@ -1,0 +1,1266 @@
+{
+  "config": {
+    "cases": [
+      {
+        "grid": 4,
+        "steps": 16
+      },
+      {
+        "grid": 8,
+        "steps": 64
+      }
+    ],
+    "checkpoint": "data/checkpoints/smooth_gmm.pt",
+    "native_potential_budget": 0.01,
+    "preparation_synthesis_budget": 0.001,
+    "repeated_synthesis_budget": 0.001,
+    "amplification_depths": [
+      0,
+      1,
+      2,
+      4,
+      8
+    ],
+    "shots_per_depth": 64,
+    "classical_particles": 4096,
+    "seed": 20261106
+  },
+  "cases": [
+    {
+      "grid": 4,
+      "steps": 16,
+      "alpha": 0.495543003649055,
+      "beta": 0.0630621354148536,
+      "n_address": 4,
+      "phase_calls_per_A": 64,
+      "kinetic_calls_per_A": 64,
+      "source": {
+        "source_compilation": "specified separable source; per-coordinate StatePreparation",
+        "source_circuit_l2_error": 1.6303370295791529e-15
+      },
+      "source_norm_deviation": 1.5543122344752192e-15,
+      "source_state_l2_difference_empirical": 1.6303370295791529e-15,
+      "certificate_reference": "Exact binary64 grid phases and the same native source and kinetic blocks",
+      "simulation": "Exact exhaustive monomial phase paths and dense logical source/kinetic composition; wide workspace statevector not allocated",
+      "kinetic_source_and_formula_cost_scope": "Compiled native blocks, serial depth bound; A-dagger reverses the same blocks",
+      "reference_event_probability": 0.9312613209472831,
+      "same_grid_ode_probability": 0.9277788219139697,
+      "product_formula_and_native_block_event_difference_empirical": 0.0034824990333134354,
+      "same_grid_ode_reference_refinement": {
+        "fidelity": 1.0,
+        "tv_distance": 6.384746209209507e-14,
+        "state_l2_error": 9.393435473187088e-14,
+        "phase_aligned_l2_error": 9.356785750282871e-14,
+        "actual_norm": 1.0000000000000087,
+        "reference_norm": 1.0000000000000002
+      },
+      "same_grid_ode_solver": {
+        "method": "DOP853_FFT",
+        "seconds": 0.023471999913454056,
+        "n": 4,
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "nfev": 314,
+        "solver_steps": 23,
+        "norm_drift": 8.659739592076221e-15
+      },
+      "learned_continuum_cell_probability": 0.7063700779045451,
+      "spatial_and_event_binning_difference_empirical": 0.22140874400942456,
+      "learned_vs_target_event_difference_empirical": -0.011088259250513155,
+      "classical_ode_and_sampling_control": {
+        "samples": 4096,
+        "successes": 2912,
+        "estimate": 0.7109375,
+        "clopper_pearson_95_interval": [
+          0.6967855269296023,
+          0.7247880125845099
+        ],
+        "interval_covers": "Monte Carlo uncertainty for the specified RK4 pushforward; not model/discretization bias",
+        "rk4_fine_steps": 128,
+        "rk4_coarse_steps": 64,
+        "fine_ode_batch_seconds": 0.7091516250511631,
+        "coarse_ode_batch_seconds": 0.3493798329727724,
+        "fine_seconds_per_particle_at_measured_batch_size": 0.00017313272095975663,
+        "same_source_rk4_refinement_rms_endpoint_change": 2.6616104654500467e-08,
+        "same_source_event_classifications_changed": 0,
+        "event": "nearest periodic grid point has both coordinate indices >= lower index",
+        "equivalent_cell_interval_per_coordinate": [
+          -1.5,
+          4.5
+        ],
+        "equivalent_cell_interval_is_periodic": true,
+        "target_GMM_probability_of_same_periodic_cell_event": 0.7174583371550582,
+        "target_GMM_omitted_periodization_tail_union_bound": 1e-300,
+        "target_GMM_tail_union_bound_log10": -372.94206375327235,
+        "target_GMM_displayed_tail_bound_floor": 1e-300,
+        "target_probability_is_learned_model_probability": false
+      },
+      "continuum_refinement": {
+        "method": "backward learned-flow characteristics with product Gauss-Legendre quadrature",
+        "cell_interval_per_axis": [
+          -1.5,
+          4.5
+        ],
+        "refinements": [
+          {
+            "quadrature_nodes_per_axis": 16,
+            "reverse_RK4_steps": 128,
+            "probability": 0.7061929180415405,
+            "seconds": 0.09288087510503829,
+            "steps": 128,
+            "maximum_absolute_log_jacobian": 2.145632556314597
+          },
+          {
+            "quadrature_nodes_per_axis": 24,
+            "reverse_RK4_steps": 128,
+            "probability": 0.7063495294832034,
+            "seconds": 0.16591241594869643,
+            "steps": 128,
+            "maximum_absolute_log_jacobian": 2.2496704902099602
+          },
+          {
+            "quadrature_nodes_per_axis": 32,
+            "reverse_RK4_steps": 128,
+            "probability": 0.7063700782024611,
+            "seconds": 0.28559154202230275,
+            "steps": 128,
+            "maximum_absolute_log_jacobian": 2.239859283097897
+          },
+          {
+            "quadrature_nodes_per_axis": 32,
+            "reverse_RK4_steps": 256,
+            "probability": 0.7063700779045451,
+            "seconds": 0.5879685829859227,
+            "steps": 256,
+            "maximum_absolute_log_jacobian": 2.2398592849264207
+          }
+        ],
+        "probability": 0.7063700779045451,
+        "last_spatial_quadrature_change": 2.0548719257718062e-05,
+        "last_reverse_RK4_change": 2.979160251825874e-10,
+        "certified_error_bound": false,
+        "total_seconds": 1.1351035829866305
+      },
+      "classical_two_site_amplitude_contraction": [
+        {
+          "rank": 1,
+          "probability": 0.9318188495976685,
+          "dense_probability": 0.9312613209473686,
+          "event_absolute_error": 0.0005575286502998988,
+          "retained_squared_singular_values": 0.999812529919983,
+          "pure_state_trace_distance_event_bound": 0.013691971370732574,
+          "amplitude_coefficients_stored": 8,
+          "dense_amplitude_coefficients": 16,
+          "dense_SVD_setup_seconds": 7.187505252659321e-05,
+          "event_contraction_seconds": 2.8540962375700474e-05,
+          "singular_values": [
+            0.9999062605664509,
+            0.013655302745357683,
+            0.0008700015434162389,
+            0.0004958671839273584
+          ],
+          "exact_at_full_rank": false,
+          "input_state_norm": 0.9999999999999541,
+          "roundoff_norm_drift_removed_before_pure_state_bound": true,
+          "high_dimensional_scalability_claimed": false
+        },
+        {
+          "rank": 2,
+          "probability": 0.9312507104997407,
+          "dense_probability": 0.9312613209473686,
+          "event_absolute_error": 1.0610447627845687e-05,
+          "retained_squared_singular_values": 0.9999989972130504,
+          "pure_state_trace_distance_event_bound": 0.0010013925052589391,
+          "amplitude_coefficients_stored": 16,
+          "dense_amplitude_coefficients": 16,
+          "dense_SVD_setup_seconds": 7.187505252659321e-05,
+          "event_contraction_seconds": 9.792041964828968e-06,
+          "singular_values": [
+            0.9999062605664509,
+            0.013655302745357683,
+            0.0008700015434162389,
+            0.0004958671839273584
+          ],
+          "exact_at_full_rank": false,
+          "input_state_norm": 0.9999999999999541,
+          "roundoff_norm_drift_removed_before_pure_state_bound": true,
+          "high_dimensional_scalability_claimed": false
+        },
+        {
+          "rank": 4,
+          "probability": 0.9312613209473675,
+          "dense_probability": 0.9312613209473686,
+          "event_absolute_error": 1.1102230246251565e-15,
+          "retained_squared_singular_values": 1.0,
+          "pure_state_trace_distance_event_bound": 0.0,
+          "amplitude_coefficients_stored": 32,
+          "dense_amplitude_coefficients": 16,
+          "dense_SVD_setup_seconds": 7.187505252659321e-05,
+          "event_contraction_seconds": 6.249989382922649e-06,
+          "singular_values": [
+            0.9999062605664509,
+            0.013655302745357683,
+            0.0008700015434162389,
+            0.0004958671839273584
+          ],
+          "exact_at_full_rank": true,
+          "input_state_norm": 0.9999999999999541,
+          "roundoff_norm_drift_removed_before_pure_state_bound": true,
+          "high_dimensional_scalability_claimed": false
+        }
+      ],
+      "amplification_schedule": {
+        "depths": [
+          0,
+          1,
+          2,
+          4,
+          8
+        ],
+        "shots_per_depth": 64,
+        "forward_A_calls": 1280,
+        "inverse_A_calls": 960,
+        "event_and_zero_reflection_calls_each": 960,
+        "controlled_preparation_calls": 0
+      },
+      "methods": [
+        {
+          "method": "uniform_tt",
+          "event_probability": 0.9312519909776491,
+          "event_error_to_product_formula": 9.329969633986579e-06,
+          "native_state_and_tv_bound": 0.00551161817687392,
+          "native_state_and_tv_bound_exact": "14308978872612953774855538429173/2596148429267413814265248164610048",
+          "tv_bound_conditional_on_rotation_synthesis": 0.00651161817687392,
+          "measured_metrics_to_native_block_reference": {
+            "fidelity": 0.9999999976672078,
+            "tv_distance": 2.3276235176472147e-05,
+            "state_l2_error": 4.8299110617065474e-05,
+            "phase_aligned_l2_error": 4.829898796885944e-05,
+            "actual_norm": 0.9999999999999533,
+            "reference_norm": 0.9999999999999541
+          },
+          "full_native_gate_integration": null,
+          "amplified_event_comparison": [
+            {
+              "depth": 0,
+              "preparation_calls": 1,
+              "event_probability_from_amplification_identity": 0.9312519909776491,
+              "reference_probability_from_amplification_identity": 0.9312613209472832,
+              "event_bias_bound_to_reference_amplified_circuit": 0.00551161817687392
+            },
+            {
+              "depth": 1,
+              "preparation_calls": 3,
+              "event_probability_from_amplification_identity": 0.4895000816077091,
+              "reference_probability_from_amplification_identity": 0.4895553817424443,
+              "event_bias_bound_to_reference_amplified_circuit": 0.01653485453062176
+            },
+            {
+              "depth": 2,
+              "preparation_calls": 5,
+              "event_probability_from_amplification_identity": 0.05850373764978692,
+              "reference_probability_from_amplification_identity": 0.05854701659074769,
+              "event_bias_bound_to_reference_amplified_circuit": 0.027558090884369602
+            },
+            {
+              "depth": 4,
+              "preparation_calls": 9,
+              "event_probability_from_amplification_identity": 0.5314812336087374,
+              "reference_probability_from_amplification_identity": 0.5313156243097295,
+              "event_bias_bound_to_reference_amplified_circuit": 0.04960456359186528
+            },
+            {
+              "depth": 8,
+              "preparation_calls": 17,
+              "event_probability_from_amplification_identity": 0.04036825366178101,
+              "reference_probability_from_amplification_identity": 0.0404917258529257,
+              "event_bias_bound_to_reference_amplified_circuit": 0.09369750900685664
+            }
+          ],
+          "per_A_and_inverse_resource_accounting": {
+            "logical_qubits": 160,
+            "clean_ancillas": 156,
+            "dirty_ancillas": 0,
+            "native_gates": 855188,
+            "ccx": 410944,
+            "native_gate_counts": {
+              "p": 2244,
+              "rz": 402,
+              "h": 524,
+              "cx": 437298,
+              "ccx": 410944,
+              "x": 3776
+            },
+            "serial_native_depth_upper_bound": 537843,
+            "arbitrary_rotations": 1842,
+            "t_count_estimate": 3013034,
+            "allocated_rotation_synthesis_budget": 0.001,
+            "allocated_rotation_synthesis_budget_exact": "1/1000",
+            "used_rotation_synthesis_allowance_exact": "143188595428152501279150083960751101990304621968574763086233964846446981184877525841483063345216047553919388655782879797129631000687674446357592064971579699804908570557976423842657842509220096217334421935377312642556689292129724552256463/143188595428152509722087657595677539595386279221427604210495370188307215610794068945874871997985237524497988532372704307692112751308589480427355843581240365147717005888972272000000000000000000000000000000000000000000000000000000000000000000",
+            "special_rotation_replacement_error_bound": 2.7309623620985976e-14,
+            "rotation_synthesis_executed": false
+          },
+          "repeated_amplification_accounting": {
+            "logical_qubits": 160,
+            "clean_ancillas": 156,
+            "dirty_ancillas": 0,
+            "native_gates": 1915659520,
+            "ccx": 920514560,
+            "native_gate_counts": {
+              "p": 5040960,
+              "rz": 900480,
+              "h": 1175680,
+              "cx": 979561920,
+              "ccx": 920514560,
+              "x": 8465920
+            },
+            "serial_native_depth_upper_bound": 1204798080,
+            "arbitrary_rotations": 4140480,
+            "t_count_estimate": 6889500480,
+            "allocated_rotation_synthesis_budget": 0.001,
+            "allocated_rotation_synthesis_budget_exact": "1/1000",
+            "used_rotation_synthesis_allowance_exact": "2087731577508972353038807395794389416690285796522367979532769732821363566471654708847910637013248699854865977573118511838764815607842306248279935305232467170415469131459054810480586847978329422323498216296679616063506162077862864912045209/2094644595977545285077396591113911436366793570324883810164960843897522696935044665722512413227669760358370575102137845872524620819142794685108748340388430484446603057575822950400000000000000000000000000000000000000000000000000000000000000000",
+            "special_rotation_replacement_error_bound": 6.117355691100859e-11,
+            "rotation_synthesis_executed": false
+          }
+        },
+        {
+          "method": "precision_tt",
+          "event_probability": 0.9312398428090611,
+          "event_error_to_product_formula": 2.1478138221953103e-05,
+          "native_state_and_tv_bound": 0.0057392745566073825,
+          "native_state_and_tv_bound_exact": "14900008625270687231045905360041/2596148429267413814265248164610048",
+          "tv_bound_conditional_on_rotation_synthesis": 0.0067392745566073825,
+          "measured_metrics_to_native_block_reference": {
+            "fidelity": 0.99999999556037,
+            "tv_distance": 4.078706702500634e-05,
+            "state_l2_error": 6.663615987105764e-05,
+            "phase_aligned_l2_error": 6.663054980114116e-05,
+            "actual_norm": 0.9999999999999526,
+            "reference_norm": 0.9999999999999541
+          },
+          "full_native_gate_integration": null,
+          "amplified_event_comparison": [
+            {
+              "depth": 0,
+              "preparation_calls": 1,
+              "event_probability_from_amplification_identity": 0.9312398428090611,
+              "reference_probability_from_amplification_identity": 0.9312613209472832,
+              "event_bias_bound_to_reference_amplified_circuit": 0.0057392745566073825
+            },
+            {
+              "depth": 1,
+              "preparation_calls": 3,
+              "event_probability_from_amplification_identity": 0.4894280829845255,
+              "reference_probability_from_amplification_identity": 0.4895553817424443,
+              "event_bias_bound_to_reference_amplified_circuit": 0.017217823669822146
+            },
+            {
+              "depth": 2,
+              "preparation_calls": 5,
+              "event_probability_from_amplification_identity": 0.05844741249278553,
+              "reference_probability_from_amplification_identity": 0.05854701659074769,
+              "event_bias_bound_to_reference_amplified_circuit": 0.02869637278303691
+            },
+            {
+              "depth": 4,
+              "preparation_calls": 9,
+              "event_probability_from_amplification_identity": 0.5316968458489099,
+              "reference_probability_from_amplification_identity": 0.5313156243097295,
+              "event_bias_bound_to_reference_amplified_circuit": 0.05165347100946644
+            },
+            {
+              "depth": 8,
+              "preparation_calls": 17,
+              "event_probability_from_amplification_identity": 0.04020776791898032,
+              "reference_probability_from_amplification_identity": 0.0404917258529257,
+              "event_bias_bound_to_reference_amplified_circuit": 0.0975676674623255
+            }
+          ],
+          "per_A_and_inverse_resource_accounting": {
+            "logical_qubits": 148,
+            "clean_ancillas": 144,
+            "dirty_ancillas": 0,
+            "native_gates": 759132,
+            "ccx": 364544,
+            "native_gate_counts": {
+              "p": 1884,
+              "rz": 402,
+              "h": 524,
+              "cx": 388066,
+              "ccx": 364544,
+              "x": 3712
+            },
+            "serial_native_depth_upper_bound": 477739,
+            "arbitrary_rotations": 1482,
+            "t_count_estimate": 2660030,
+            "allocated_rotation_synthesis_budget": 0.001,
+            "allocated_rotation_synthesis_budget_exact": "1/1000",
+            "used_rotation_synthesis_allowance_exact": "286377190856305003407298373912483792084703915097697596248488375129011585283484843647299306115410442024141918021386125301538138508773935810018253111003670015849399134809296678533070385988898398018882817042369123199674449086063800911153551/286377190856305019444175315191355079190772558442855208420990740376614431221588137891749743995970475048995977064745408615384225502617178960854711687162480730295434011777944544000000000000000000000000000000000000000000000000000000000000000000",
+            "special_rotation_replacement_error_bound": 2.7309623620985976e-14,
+            "rotation_synthesis_executed": false
+          },
+          "repeated_amplification_accounting": {
+            "logical_qubits": 148,
+            "clean_ancillas": 144,
+            "dirty_ancillas": 0,
+            "native_gates": 1700494080,
+            "ccx": 816578560,
+            "native_gate_counts": {
+              "p": 4234560,
+              "rz": 900480,
+              "h": 1175680,
+              "cx": 869282240,
+              "ccx": 816578560,
+              "x": 8322560
+            },
+            "serial_native_depth_upper_bound": 1070165120,
+            "arbitrary_rotations": 3334080,
+            "t_count_estimate": 6071210560,
+            "allocated_rotation_synthesis_budget": 0.001,
+            "allocated_rotation_synthesis_budget_exact": "1/1000",
+            "used_rotation_synthesis_allowance_exact": "2087731577508972365652495027660401582808263768050510734947930636443682535475640189460860731327212711182798353833306802346908123717764169019639817309560053468832115894903020297361513833825137048146105817703523585079842066676098948896420209/2094644595977545285077396591113911436366793570324883810164960843897522696935044665722512413227669760358370575102137845872524620819142794685108748340388430484446603057575822950400000000000000000000000000000000000000000000000000000000000000000",
+            "special_rotation_replacement_error_bound": 6.117355691100859e-11,
+            "rotation_synthesis_executed": false
+          }
+        },
+        {
+          "method": "walsh",
+          "event_probability": 0.9312613209472805,
+          "event_error_to_product_formula": 2.55351295663786e-15,
+          "native_state_and_tv_bound": 1.0679858625857748e-15,
+          "native_state_and_tv_bound_exact": "173290613726991447/162259276829213363391578010288128",
+          "tv_bound_conditional_on_rotation_synthesis": 0.0010000000000010682,
+          "measured_metrics_to_native_block_reference": {
+            "fidelity": 1.0,
+            "tv_distance": 1.765591871203816e-16,
+            "state_l2_error": 1.4177145650648005e-15,
+            "phase_aligned_l2_error": 3.626371708439262e-16,
+            "actual_norm": 0.9999999999999527,
+            "reference_norm": 0.9999999999999541
+          },
+          "full_native_gate_integration": {
+            "full_simulated_qubits": 4,
+            "full_gate_count": 5112,
+            "full_native_depth": 3029,
+            "clean_workspace_l2_error": 0.0,
+            "phase_aligned_l2_error_to_block_composition": 5.49791717477202e-15,
+            "full_inverse_l2_error_to_zero_state": 9.726839384417396e-14
+          },
+          "amplified_event_comparison": [
+            {
+              "depth": 0,
+              "preparation_calls": 1,
+              "event_probability_from_amplification_identity": 0.9312613209472806,
+              "reference_probability_from_amplification_identity": 0.9312613209472832,
+              "event_bias_bound_to_reference_amplified_circuit": 1.0679858625857748e-15
+            },
+            {
+              "depth": 1,
+              "preparation_calls": 3,
+              "event_probability_from_amplification_identity": 0.4895553817424288,
+              "reference_probability_from_amplification_identity": 0.4895553817424443,
+              "event_bias_bound_to_reference_amplified_circuit": 3.2039575877573246e-15
+            },
+            {
+              "depth": 2,
+              "preparation_calls": 5,
+              "event_probability_from_amplification_identity": 0.058547016590735586,
+              "reference_probability_from_amplification_identity": 0.05854701659074769,
+              "event_bias_bound_to_reference_amplified_circuit": 5.339929312928874e-15
+            },
+            {
+              "depth": 4,
+              "preparation_calls": 9,
+              "event_probability_from_amplification_identity": 0.5313156243097754,
+              "reference_probability_from_amplification_identity": 0.5313156243097295,
+              "event_bias_bound_to_reference_amplified_circuit": 9.611872763271974e-15
+            },
+            {
+              "depth": 8,
+              "preparation_calls": 17,
+              "event_probability_from_amplification_identity": 0.04049172585289209,
+              "reference_probability_from_amplification_identity": 0.0404917258529257,
+              "event_bias_bound_to_reference_amplified_circuit": 1.815575966395817e-14
+            }
+          ],
+          "per_A_and_inverse_resource_accounting": {
+            "logical_qubits": 4,
+            "clean_ancillas": 0,
+            "dirty_ancillas": 0,
+            "native_gates": 5112,
+            "ccx": 0,
+            "native_gate_counts": {
+              "p": 792,
+              "rz": 1362,
+              "h": 524,
+              "cx": 2434
+            },
+            "serial_native_depth_upper_bound": 3091,
+            "arbitrary_rotations": 1350,
+            "t_count_estimate": 97758,
+            "allocated_rotation_synthesis_budget": 0.001,
+            "allocated_rotation_synthesis_budget_exact": "1/1000",
+            "used_rotation_synthesis_allowance_exact": "286377190856304998555880053964017574347020079894565767242657258351196597205028889565395423686962745359552542536698321259944558466496296282572144647800752208766073456561617645117329237586280080394802970347429135116468331932896076301778551/286377190856305019444175315191355079190772558442855208420990740376614431221588137891749743995970475048995977064745408615384225502617178960854711687162480730295434011777944544000000000000000000000000000000000000000000000000000000000000000000",
+            "special_rotation_replacement_error_bound": 2.7309623620985976e-14,
+            "rotation_synthesis_executed": false
+          },
+          "repeated_amplification_accounting": {
+            "logical_qubits": 4,
+            "clean_ancillas": 0,
+            "dirty_ancillas": 0,
+            "native_gates": 11489280,
+            "ccx": 0,
+            "native_gate_counts": {
+              "p": 1788480,
+              "rz": 3050880,
+              "h": 1175680,
+              "cx": 5466560,
+              "x": 7680
+            },
+            "serial_native_depth_upper_bound": 6953600,
+            "arbitrary_rotations": 3038400,
+            "t_count_estimate": 323334720,
+            "allocated_rotation_synthesis_budget": 0.001,
+            "allocated_rotation_synthesis_budget_exact": "1/1000",
+            "used_rotation_synthesis_allowance_exact": "2087731577508972348187389075845923198952601961319236150526938616043548578393198754766006754584801003190276602088430707797171235565564666720833826842029549363332143453211375777064845699575711104699418369601739627980300044924695140302670209/2094644595977545285077396591113911436366793570324883810164960843897522696935044665722512413227669760358370575102137845872524620819142794685108748340388430484446603057575822950400000000000000000000000000000000000000000000000000000000000000000",
+            "special_rotation_replacement_error_bound": 6.117355691100859e-11,
+            "rotation_synthesis_executed": false
+          }
+        },
+        {
+          "method": "direct_fourier",
+          "event_probability": 0.9312613209472831,
+          "event_error_to_product_formula": 0.0,
+          "native_state_and_tv_bound": 3.290824125023777e-15,
+          "native_state_and_tv_bound_exact": "4271733941587894779/1298074214633706907132624082305024",
+          "tv_bound_conditional_on_rotation_synthesis": 0.001000000000003291,
+          "measured_metrics_to_native_block_reference": {
+            "fidelity": 1.0,
+            "tv_distance": 9.579941640829402e-17,
+            "state_l2_error": 4.464834292215935e-16,
+            "phase_aligned_l2_error": 4.247545480464167e-16,
+            "actual_norm": 0.999999999999954,
+            "reference_norm": 0.9999999999999541
+          },
+          "full_native_gate_integration": {
+            "full_simulated_qubits": 5,
+            "full_gate_count": 7836,
+            "full_native_depth": 5355,
+            "clean_workspace_l2_error": 0.0,
+            "phase_aligned_l2_error_to_block_composition": 5.472414663988028e-15,
+            "full_inverse_l2_error_to_zero_state": 9.991142640568984e-14
+          },
+          "amplified_event_comparison": [
+            {
+              "depth": 0,
+              "preparation_calls": 1,
+              "event_probability_from_amplification_identity": 0.9312613209472832,
+              "reference_probability_from_amplification_identity": 0.9312613209472832,
+              "event_bias_bound_to_reference_amplified_circuit": 3.290824125023777e-15
+            },
+            {
+              "depth": 1,
+              "preparation_calls": 3,
+              "event_probability_from_amplification_identity": 0.4895553817424443,
+              "reference_probability_from_amplification_identity": 0.4895553817424443,
+              "event_bias_bound_to_reference_amplified_circuit": 9.872472375071331e-15
+            },
+            {
+              "depth": 2,
+              "preparation_calls": 5,
+              "event_probability_from_amplification_identity": 0.05854701659074769,
+              "reference_probability_from_amplification_identity": 0.05854701659074769,
+              "event_bias_bound_to_reference_amplified_circuit": 1.6454120625118885e-14
+            },
+            {
+              "depth": 4,
+              "preparation_calls": 9,
+              "event_probability_from_amplification_identity": 0.5313156243097295,
+              "reference_probability_from_amplification_identity": 0.5313156243097295,
+              "event_bias_bound_to_reference_amplified_circuit": 2.9617417125213994e-14
+            },
+            {
+              "depth": 8,
+              "preparation_calls": 17,
+              "event_probability_from_amplification_identity": 0.0404917258529257,
+              "reference_probability_from_amplification_identity": 0.0404917258529257,
+              "event_bias_bound_to_reference_amplified_circuit": 5.594401012540421e-14
+            }
+          ],
+          "per_A_and_inverse_resource_accounting": {
+            "logical_qubits": 5,
+            "clean_ancillas": 1,
+            "dirty_ancillas": 0,
+            "native_gates": 7836,
+            "ccx": 512,
+            "native_gate_counts": {
+              "p": 792,
+              "rz": 1654,
+              "h": 524,
+              "cx": 4354,
+              "ccx": 512
+            },
+            "serial_native_depth_upper_bound": 5355,
+            "arbitrary_rotations": 1642,
+            "t_count_estimate": 124246,
+            "allocated_rotation_synthesis_budget": 0.001,
+            "allocated_rotation_synthesis_budget_exact": "1/1000",
+            "used_rotation_synthesis_allowance_exact": "286377190856305008258716693860950009822387750300829425254319491906826573361940797729203188543858138688731293506073929343131718551051575337464361574206587822932724813056975711948811534391516715642962663737309111282880566239231525520528551/286377190856305019444175315191355079190772558442855208420990740376614431221588137891749743995970475048995977064745408615384225502617178960854711687162480730295434011777944544000000000000000000000000000000000000000000000000000000000000000000",
+            "special_rotation_replacement_error_bound": 2.7309623620985976e-14,
+            "rotation_synthesis_executed": false
+          },
+          "repeated_amplification_accounting": {
+            "logical_qubits": 5,
+            "clean_ancillas": 1,
+            "dirty_ancillas": 0,
+            "native_gates": 17591040,
+            "ccx": 1146880,
+            "native_gate_counts": {
+              "p": 1788480,
+              "rz": 3704960,
+              "h": 1175680,
+              "cx": 9767360,
+              "ccx": 1146880,
+              "x": 7680
+            },
+            "serial_native_depth_upper_bound": 12024960,
+            "arbitrary_rotations": 3692480,
+            "t_count_estimate": 403670080,
+            "allocated_rotation_synthesis_budget": 0.001,
+            "allocated_rotation_synthesis_budget_exact": "1/1000",
+            "used_rotation_synthesis_allowance_exact": "2087731577508972389424444795407886049722914560545856697076503108654975977060074364462189755226606424839286293708277042150716665924924602704125748779254350723540411718316647561098645460997966804504097066508729526687552040726620799482357709/2094644595977545285077396591113911436366793570324883810164960843897522696935044665722512413227669760358370575102137845872524620819142794685108748340388430484446603057575822950400000000000000000000000000000000000000000000000000000000000000000",
+            "special_rotation_replacement_error_bound": 6.117355691100859e-11,
+            "rotation_synthesis_executed": false
+          }
+        }
+      ],
+      "total_seconds": 4.581312874914147
+    },
+    {
+      "grid": 8,
+      "steps": 64,
+      "alpha": 0.12388575091226374,
+      "beta": 0.06306213541485362,
+      "n_address": 6,
+      "phase_calls_per_A": 256,
+      "kinetic_calls_per_A": 256,
+      "source": {
+        "source_compilation": "specified separable source; per-coordinate StatePreparation",
+        "source_circuit_l2_error": 5.61275044117717e-15
+      },
+      "source_norm_deviation": 2.3314683517128287e-15,
+      "source_state_l2_difference_empirical": 5.61275044117717e-15,
+      "certificate_reference": "Exact binary64 grid phases and the same native source and kinetic blocks",
+      "simulation": "Exact exhaustive monomial phase paths and dense logical source/kinetic composition; wide workspace statevector not allocated",
+      "kinetic_source_and_formula_cost_scope": "Compiled native blocks, serial depth bound; A-dagger reverses the same blocks",
+      "reference_event_probability": 0.21350018453162403,
+      "same_grid_ode_probability": 0.21620707981832732,
+      "product_formula_and_native_block_event_difference_empirical": -0.002706895286703287,
+      "same_grid_ode_reference_refinement": {
+        "fidelity": 1.0,
+        "tv_distance": 3.921886296506911e-13,
+        "state_l2_error": 5.223690529494307e-13,
+        "phase_aligned_l2_error": 4.9097404284226e-13,
+        "actual_norm": 0.9999999999998203,
+        "reference_norm": 0.9999999999999987
+      },
+      "same_grid_ode_solver": {
+        "method": "DOP853_FFT",
+        "seconds": 0.028993249987252057,
+        "n": 8,
+        "rtol": 1e-11,
+        "atol": 1e-13,
+        "nfev": 350,
+        "solver_steps": 26,
+        "norm_drift": 1.7974510768681284e-13
+      },
+      "learned_continuum_cell_probability": 0.2664095193665176,
+      "spatial_and_event_binning_difference_empirical": -0.05020243954819026,
+      "learned_vs_target_event_difference_empirical": -0.0014911049685897848,
+      "classical_ode_and_sampling_control": {
+        "samples": 4096,
+        "successes": 1078,
+        "estimate": 0.26318359375,
+        "clopper_pearson_95_interval": [
+          0.24974844177150748,
+          0.27695730471288743
+        ],
+        "interval_covers": "Monte Carlo uncertainty for the specified RK4 pushforward; not model/discretization bias",
+        "rk4_fine_steps": 128,
+        "rk4_coarse_steps": 64,
+        "fine_ode_batch_seconds": 0.6781462921062484,
+        "coarse_ode_batch_seconds": 0.3069203330669552,
+        "fine_seconds_per_particle_at_measured_batch_size": 0.00016556305959625206,
+        "same_source_rk4_refinement_rms_endpoint_change": 2.6616104654500467e-08,
+        "same_source_event_classifications_changed": 0,
+        "event": "nearest periodic grid point has both coordinate indices >= lower index",
+        "equivalent_cell_interval_per_coordinate": [
+          0.75,
+          5.25
+        ],
+        "equivalent_cell_interval_is_periodic": true,
+        "target_GMM_probability_of_same_periodic_cell_event": 0.26790062433510736,
+        "target_GMM_omitted_periodization_tail_union_bound": 1e-300,
+        "target_GMM_tail_union_bound_log10": -372.94206375327235,
+        "target_GMM_displayed_tail_bound_floor": 1e-300,
+        "target_probability_is_learned_model_probability": false
+      },
+      "continuum_refinement": {
+        "method": "backward learned-flow characteristics with product Gauss-Legendre quadrature",
+        "cell_interval_per_axis": [
+          0.75,
+          5.25
+        ],
+        "refinements": [
+          {
+            "quadrature_nodes_per_axis": 16,
+            "reverse_RK4_steps": 128,
+            "probability": 0.26640800818310195,
+            "seconds": 0.08490620797965676,
+            "steps": 128,
+            "maximum_absolute_log_jacobian": 2.2101588631595606
+          },
+          {
+            "quadrature_nodes_per_axis": 24,
+            "reverse_RK4_steps": 128,
+            "probability": 0.26640928296217387,
+            "seconds": 0.16890712501481175,
+            "steps": 128,
+            "maximum_absolute_log_jacobian": 2.2556711823484186
+          },
+          {
+            "quadrature_nodes_per_axis": 32,
+            "reverse_RK4_steps": 128,
+            "probability": 0.2664095192980297,
+            "seconds": 0.2949031660100445,
+            "steps": 128,
+            "maximum_absolute_log_jacobian": 2.2448950513759347
+          },
+          {
+            "quadrature_nodes_per_axis": 32,
+            "reverse_RK4_steps": 256,
+            "probability": 0.2664095193665176,
+            "seconds": 0.5830322080291808,
+            "steps": 256,
+            "maximum_absolute_log_jacobian": 2.244895053505065
+          }
+        ],
+        "probability": 0.2664095193665176,
+        "last_spatial_quadrature_change": 2.3633585582993888e-07,
+        "last_reverse_RK4_change": 6.848788203228651e-11,
+        "certified_error_bound": false,
+        "total_seconds": 1.1330265830038115
+      },
+      "classical_two_site_amplitude_contraction": [
+        {
+          "rank": 1,
+          "probability": 0.13477541997593984,
+          "dense_probability": 0.21350018453173364,
+          "event_absolute_error": 0.0787247645557938,
+          "retained_squared_singular_values": 0.9573386092867073,
+          "pure_state_trace_distance_event_bound": 0.20654634035318242,
+          "amplitude_coefficients_stored": 16,
+          "dense_amplitude_coefficients": 64,
+          "dense_SVD_setup_seconds": 8.774991147220135e-05,
+          "event_contraction_seconds": 2.554105594754219e-05,
+          "singular_values": [
+            0.9784368192615749,
+            0.1997799115569761,
+            0.036897819795073526,
+            0.03629980711446467,
+            0.0082378222153526,
+            0.0014646558410436388,
+            0.00048016714581338544,
+            0.0001227083125584296
+          ],
+          "exact_at_full_rank": false,
+          "input_state_norm": 0.9999999999997433,
+          "roundoff_norm_drift_removed_before_pure_state_bound": true,
+          "high_dimensional_scalability_claimed": false
+        },
+        {
+          "rank": 2,
+          "probability": 0.210932425064436,
+          "dense_probability": 0.21350018453173364,
+          "event_absolute_error": 0.002567759467297648,
+          "retained_squared_singular_values": 0.9972506223484205,
+          "pure_state_trace_distance_event_bound": 0.05243450821338419,
+          "amplitude_coefficients_stored": 32,
+          "dense_amplitude_coefficients": 64,
+          "dense_SVD_setup_seconds": 8.774991147220135e-05,
+          "event_contraction_seconds": 1.4333054423332214e-05,
+          "singular_values": [
+            0.9784368192615749,
+            0.1997799115569761,
+            0.036897819795073526,
+            0.03629980711446467,
+            0.0082378222153526,
+            0.0014646558410436388,
+            0.00048016714581338544,
+            0.0001227083125584296
+          ],
+          "exact_at_full_rank": false,
+          "input_state_norm": 0.9999999999997433,
+          "roundoff_norm_drift_removed_before_pure_state_bound": true,
+          "high_dimensional_scalability_claimed": false
+        },
+        {
+          "rank": 8,
+          "probability": 0.21350018453173358,
+          "dense_probability": 0.21350018453173364,
+          "event_absolute_error": 5.551115123125783e-17,
+          "retained_squared_singular_values": 1.0,
+          "pure_state_trace_distance_event_bound": 0.0,
+          "amplitude_coefficients_stored": 128,
+          "dense_amplitude_coefficients": 64,
+          "dense_SVD_setup_seconds": 8.774991147220135e-05,
+          "event_contraction_seconds": 1.1291936971247196e-05,
+          "singular_values": [
+            0.9784368192615749,
+            0.1997799115569761,
+            0.036897819795073526,
+            0.03629980711446467,
+            0.0082378222153526,
+            0.0014646558410436388,
+            0.00048016714581338544,
+            0.0001227083125584296
+          ],
+          "exact_at_full_rank": true,
+          "input_state_norm": 0.9999999999997433,
+          "roundoff_norm_drift_removed_before_pure_state_bound": true,
+          "high_dimensional_scalability_claimed": false
+        }
+      ],
+      "amplification_schedule": {
+        "depths": [
+          0,
+          1,
+          2,
+          4,
+          8
+        ],
+        "shots_per_depth": 64,
+        "forward_A_calls": 1280,
+        "inverse_A_calls": 960,
+        "event_and_zero_reflection_calls_each": 960,
+        "controlled_preparation_calls": 0
+      },
+      "methods": [
+        {
+          "method": "uniform_tt",
+          "event_probability": 0.21349352635336372,
+          "event_error_to_product_formula": 6.6581782603158945e-06,
+          "native_state_and_tv_bound": 0.006062640050183373,
+          "native_state_and_tv_bound_exact": "491859795109289915418607820483/81129638414606681695789005144064",
+          "tv_bound_conditional_on_rotation_synthesis": 0.007062640050183373,
+          "measured_metrics_to_native_block_reference": {
+            "fidelity": 0.9999999993656308,
+            "tv_distance": 2.2477572082408377e-05,
+            "state_l2_error": 2.5186692510735997e-05,
+            "phase_aligned_l2_error": 2.518669064339886e-05,
+            "actual_norm": 0.9999999999997458,
+            "reference_norm": 0.9999999999997433
+          },
+          "full_native_gate_integration": null,
+          "amplified_event_comparison": [
+            {
+              "depth": 0,
+              "preparation_calls": 1,
+              "event_probability_from_amplification_identity": 0.21349352635336372,
+              "reference_probability_from_amplification_identity": 0.21350018453162412,
+              "event_bias_bound_to_reference_amplified_circuit": 0.006062640050183373
+            },
+            {
+              "depth": 1,
+              "preparation_calls": 3,
+              "event_probability_from_amplification_identity": 0.9832288805324669,
+              "reference_probability_from_amplification_identity": 0.9832351394496628,
+              "event_bias_bound_to_reference_amplified_circuit": 0.01818792015055012
+            },
+            {
+              "depth": 2,
+              "preparation_calls": 5,
+              "event_probability_from_amplification_identity": 0.45470961319475905,
+              "reference_probability_from_amplification_identity": 0.4546691594403774,
+              "event_bias_bound_to_reference_amplified_circuit": 0.030313200250916866
+            },
+            {
+              "depth": 4,
+              "preparation_calls": 9,
+              "event_probability_from_amplification_identity": 0.855734940024235,
+              "reference_probability_from_amplification_identity": 0.8557863171748625,
+              "event_bias_bound_to_reference_amplified_circuit": 0.05456376045165036
+            },
+            {
+              "depth": 8,
+              "preparation_calls": 17,
+              "event_probability_from_amplification_identity": 0.9061951598757295,
+              "reference_probability_from_amplification_identity": 0.9061146099005376,
+              "event_bias_bound_to_reference_amplified_circuit": 0.10306488085311734
+            }
+          ],
+          "per_A_and_inverse_resource_accounting": {
+            "logical_qubits": 307,
+            "clean_ancillas": 301,
+            "dirty_ancillas": 0,
+            "native_gates": 10174794,
+            "ccx": 4757120,
+            "native_gate_counts": {
+              "p": 16292,
+              "rz": 3626,
+              "h": 3100,
+              "cx": 5370480,
+              "ccx": 4757120,
+              "x": 24176
+            },
+            "serial_native_depth_upper_bound": 6524497,
+            "arbitrary_rotations": 13692,
+            "t_count_estimate": 34427488,
+            "allocated_rotation_synthesis_budget": 0.001,
+            "allocated_rotation_synthesis_budget_exact": "1/1000",
+            "used_rotation_synthesis_allowance_exact": "2291017526850439936791021399017902633029305500273453452866509254699890115662418104613651023345701693079845665215353209806316881000190064885871381989897720448910106929335703487394049945512310315297614821081617198045890485161062888643407339/2291017526850440155553402521530840633526180467542841667367925923012915449772705103133997951967763800391967816517963268923073804020937431686837693497299845842363472094223556352000000000000000000000000000000000000000000000000000000000000000000",
+            "special_rotation_replacement_error_bound": 1.9704566998280913e-13,
+            "rotation_synthesis_executed": false
+          },
+          "repeated_amplification_accounting": {
+            "logical_qubits": 307,
+            "clean_ancillas": 301,
+            "dirty_ancillas": 0,
+            "native_gates": 22792102080,
+            "ccx": 10655952640,
+            "native_gate_counts": {
+              "p": 36721600,
+              "rz": 8156800,
+              "h": 7007360,
+              "cx": 12030084480,
+              "ccx": 10655952640,
+              "x": 54179200
+            },
+            "serial_native_depth_upper_bound": 14615289920,
+            "arbitrary_rotations": 30770880,
+            "t_count_estimate": 78144282560,
+            "allocated_rotation_synthesis_budget": 0.001,
+            "allocated_rotation_synthesis_budget_exact": "1/1000",
+            "used_rotation_synthesis_allowance_exact": "8378578383910180083689023477275282175354200628304965553913876063320868741849862418752075013922989671694143160831134777075480279872085457235159500960839150156873535420675323160169173011512053432960698903074720266512106721640871293442502739/8378578383910181140309586364455645745467174281299535240659843375590090787740178662890049652910679041433482300408551383490098483276571178740434993361553721937786412230303291801600000000000000000000000000000000000000000000000000000000000000000",
+            "special_rotation_replacement_error_bound": 4.463200766556546e-10,
+            "rotation_synthesis_executed": false
+          }
+        },
+        {
+          "method": "precision_tt",
+          "event_probability": 0.21349230706200253,
+          "event_error_to_product_formula": 7.877469621497823e-06,
+          "native_state_and_tv_bound": 0.006120221163075472,
+          "native_state_and_tv_bound_exact": "496531329977736561625258214895/81129638414606681695789005144064",
+          "tv_bound_conditional_on_rotation_synthesis": 0.007120221163075472,
+          "measured_metrics_to_native_block_reference": {
+            "fidelity": 0.9999999992322546,
+            "tv_distance": 2.405015926304353e-05,
+            "state_l2_error": 2.770821716028252e-05,
+            "phase_aligned_l2_error": 2.7708215396074555e-05,
+            "actual_norm": 0.9999999999997489,
+            "reference_norm": 0.9999999999997433
+          },
+          "full_native_gate_integration": null,
+          "amplified_event_comparison": [
+            {
+              "depth": 0,
+              "preparation_calls": 1,
+              "event_probability_from_amplification_identity": 0.21349230706200253,
+              "reference_probability_from_amplification_identity": 0.21350018453162412,
+              "event_bias_bound_to_reference_amplified_circuit": 0.006120221163075472
+            },
+            {
+              "depth": 1,
+              "preparation_calls": 3,
+              "event_probability_from_amplification_identity": 0.9832277342244468,
+              "reference_probability_from_amplification_identity": 0.9832351394496628,
+              "event_bias_bound_to_reference_amplified_circuit": 0.018360663489226416
+            },
+            {
+              "depth": 2,
+              "preparation_calls": 5,
+              "event_probability_from_amplification_identity": 0.4547170214464559,
+              "reference_probability_from_amplification_identity": 0.4546691594403774,
+              "event_bias_bound_to_reference_amplified_circuit": 0.03060110581537736
+            },
+            {
+              "depth": 4,
+              "preparation_calls": 9,
+              "event_probability_from_amplification_identity": 0.8557255305999488,
+              "reference_probability_from_amplification_identity": 0.8557863171748625,
+              "event_bias_bound_to_reference_amplified_circuit": 0.05508199046767925
+            },
+            {
+              "depth": 8,
+              "preparation_calls": 17,
+              "event_probability_from_amplification_identity": 0.9062099074826383,
+              "reference_probability_from_amplification_identity": 0.9061146099005376,
+              "event_bias_bound_to_reference_amplified_circuit": 0.10404375977228303
+            }
+          ],
+          "per_A_and_inverse_resource_accounting": {
+            "logical_qubits": 267,
+            "clean_ancillas": 261,
+            "dirty_ancillas": 0,
+            "native_gates": 8736486,
+            "ccx": 4087632,
+            "native_gate_counts": {
+              "p": 14232,
+              "rz": 3626,
+              "h": 3100,
+              "cx": 4603776,
+              "ccx": 4087632,
+              "x": 24120
+            },
+            "serial_native_depth_upper_bound": 5596993,
+            "arbitrary_rotations": 11632,
+            "t_count_estimate": 29563720,
+            "allocated_rotation_synthesis_budget": 0.001,
+            "allocated_rotation_synthesis_budget_exact": "1/1000",
+            "used_rotation_synthesis_allowance_exact": "2291017526850439995250612154396920556768395714471191992386774211872560722007812351300592806608496437888147639805841248507519520509635621191596988971492880024264181352220235840053730783763861042667776973755644054448524196856733970186376089/2291017526850440155553402521530840633526180467542841667367925923012915449772705103133997951967763800391967816517963268923073804020937431686837693497299845842363472094223556352000000000000000000000000000000000000000000000000000000000000000000",
+            "special_rotation_replacement_error_bound": 1.9704566998280913e-13,
+            "rotation_synthesis_executed": false
+          },
+          "repeated_amplification_accounting": {
+            "logical_qubits": 267,
+            "clean_ancillas": 261,
+            "dirty_ancillas": 0,
+            "native_gates": 19570292160,
+            "ccx": 9156299520,
+            "native_gate_counts": {
+              "p": 32107200,
+              "rz": 8156800,
+              "h": 7007360,
+              "cx": 10312667520,
+              "ccx": 9156299520,
+              "x": 54053760
+            },
+            "serial_native_depth_upper_bound": 12537680960,
+            "arbitrary_rotations": 26156480,
+            "t_count_estimate": 67102847680,
+            "allocated_rotation_synthesis_budget": 0.001,
+            "allocated_rotation_synthesis_budget_exact": "1/1000",
+            "used_rotation_synthesis_allowance_exact": "8378578383910180042937109589708165946357656412598658190264894682387222841990832404464082401524029019711592406759757223126094207516953285204612189869934640577373599723394819279476947364930059564918428190837224366613175337554262406723752739/8378578383910181140309586364455645745467174281299535240659843375590090787740178662890049652910679041433482300408551383490098483276571178740434993361553721937786412230303291801600000000000000000000000000000000000000000000000000000000000000000",
+            "special_rotation_replacement_error_bound": 4.463200766556546e-10,
+            "rotation_synthesis_executed": false
+          }
+        },
+        {
+          "method": "walsh",
+          "event_probability": 0.21350018453162392,
+          "event_error_to_product_formula": 1.1102230246251565e-16,
+          "native_state_and_tv_bound": 7.14218370838985e-15,
+          "native_state_and_tv_bound_exact": "2317771127009452511/324518553658426726783156020576256",
+          "tv_bound_conditional_on_rotation_synthesis": 0.0010000000000071423,
+          "measured_metrics_to_native_block_reference": {
+            "fidelity": 1.0,
+            "tv_distance": 1.1548119242295866e-15,
+            "state_l2_error": 1.846382298695615e-15,
+            "phase_aligned_l2_error": 1.7658355043439217e-15,
+            "actual_norm": 0.999999999999743,
+            "reference_norm": 0.9999999999997433
+          },
+          "full_native_gate_integration": {
+            "full_simulated_qubits": 6,
+            "full_gate_count": 60294,
+            "full_native_depth": 40499,
+            "clean_workspace_l2_error": 0.0,
+            "phase_aligned_l2_error_to_block_composition": 6.347661401618609e-14,
+            "full_inverse_l2_error_to_zero_state": 5.499817296811561e-13
+          },
+          "amplified_event_comparison": [
+            {
+              "depth": 0,
+              "preparation_calls": 1,
+              "event_probability_from_amplification_identity": 0.2135001845316239,
+              "reference_probability_from_amplification_identity": 0.21350018453162412,
+              "event_bias_bound_to_reference_amplified_circuit": 7.14218370838985e-15
+            },
+            {
+              "depth": 1,
+              "preparation_calls": 3,
+              "event_probability_from_amplification_identity": 0.9832351394496626,
+              "reference_probability_from_amplification_identity": 0.9832351394496628,
+              "event_bias_bound_to_reference_amplified_circuit": 2.142655112516955e-14
+            },
+            {
+              "depth": 2,
+              "preparation_calls": 5,
+              "event_probability_from_amplification_identity": 0.4546691594403787,
+              "reference_probability_from_amplification_identity": 0.4546691594403774,
+              "event_bias_bound_to_reference_amplified_circuit": 3.571091854194925e-14
+            },
+            {
+              "depth": 4,
+              "preparation_calls": 9,
+              "event_probability_from_amplification_identity": 0.8557863171748613,
+              "reference_probability_from_amplification_identity": 0.8557863171748625,
+              "event_bias_bound_to_reference_amplified_circuit": 6.427965337550866e-14
+            },
+            {
+              "depth": 8,
+              "preparation_calls": 17,
+              "event_probability_from_amplification_identity": 0.9061146099005397,
+              "reference_probability_from_amplification_identity": 0.9061146099005376,
+              "event_bias_bound_to_reference_amplified_circuit": 1.2141712304262744e-13
+            }
+          ],
+          "per_A_and_inverse_resource_accounting": {
+            "logical_qubits": 6,
+            "clean_ancillas": 0,
+            "dirty_ancillas": 0,
+            "native_gates": 60294,
+            "ccx": 0,
+            "native_gate_counts": {
+              "p": 9272,
+              "rz": 19754,
+              "h": 3100,
+              "cx": 28168
+            },
+            "serial_native_depth_upper_bound": 40753,
+            "arbitrary_rotations": 22800,
+            "t_count_estimate": 1924080,
+            "allocated_rotation_synthesis_budget": 0.001,
+            "allocated_rotation_synthesis_budget_exact": "1/1000",
+            "used_rotation_synthesis_allowance_exact": "286377190856305003423907315506938656160068890336492544943800670065698127253447880886650753462120303536381531548987243785384623536215622882615932192526526312023901746326388679554126986491400924615913244763702684437470590374558768215435683/286377190856305019444175315191355079190772558442855208420990740376614431221588137891749743995970475048995977064745408615384225502617178960854711687162480730295434011777944544000000000000000000000000000000000000000000000000000000000000000000",
+            "special_rotation_replacement_error_bound": 1.9704566998280913e-13,
+            "rotation_synthesis_executed": false
+          },
+          "repeated_amplification_accounting": {
+            "logical_qubits": 6,
+            "clean_ancillas": 0,
+            "dirty_ancillas": 0,
+            "native_gates": 135622080,
+            "ccx": 3840,
+            "native_gate_counts": {
+              "p": 20996800,
+              "rz": 44283520,
+              "h": 7007360,
+              "cx": 63305600,
+              "x": 24960,
+              "ccx": 3840
+            },
+            "serial_native_depth_upper_bound": 91703360,
+            "arbitrary_rotations": 51172800,
+            "t_count_estimate": 6043574720,
+            "allocated_rotation_synthesis_budget": 0.001,
+            "allocated_rotation_synthesis_budget_exact": "1/1000",
+            "used_rotation_synthesis_allowance_exact": "8378578383910180363130718706306936317044789536005358904649748389723012055168925373869738641801576999574491188749152289871270490307277494016055348441327215844873094487741635484915863159502868528107698072703263580104779069663332230942502739/8378578383910181140309586364455645745467174281299535240659843375590090787740178662890049652910679041433482300408551383490098483276571178740434993361553721937786412230303291801600000000000000000000000000000000000000000000000000000000000000000",
+            "special_rotation_replacement_error_bound": 4.463200766556546e-10,
+            "rotation_synthesis_executed": false
+          }
+        },
+        {
+          "method": "direct_fourier",
+          "event_probability": 0.21350018453162467,
+          "event_error_to_product_formula": 6.38378239159465e-16,
+          "native_state_and_tv_bound": 1.4293839376121942e-14,
+          "native_state_and_tv_bound_exact": "579827010070620109/40564819207303340847894502572032",
+          "tv_bound_conditional_on_rotation_synthesis": 0.001000000000014294,
+          "measured_metrics_to_native_block_reference": {
+            "fidelity": 1.0,
+            "tv_distance": 5.641714528170266e-16,
+            "state_l2_error": 1.5046349395091637e-15,
+            "phase_aligned_l2_error": 9.402322476732917e-16,
+            "actual_norm": 0.9999999999997446,
+            "reference_norm": 0.9999999999997433
+          },
+          "full_native_gate_integration": {
+            "full_simulated_qubits": 7,
+            "full_gate_count": 137546,
+            "full_native_depth": 101057,
+            "clean_workspace_l2_error": 0.0,
+            "phase_aligned_l2_error_to_block_composition": 6.551715689601246e-14,
+            "full_inverse_l2_error_to_zero_state": 5.300811864664383e-13
+          },
+          "amplified_event_comparison": [
+            {
+              "depth": 0,
+              "preparation_calls": 1,
+              "event_probability_from_amplification_identity": 0.21350018453162467,
+              "reference_probability_from_amplification_identity": 0.21350018453162412,
+              "event_bias_bound_to_reference_amplified_circuit": 1.4293839376121942e-14
+            },
+            {
+              "depth": 1,
+              "preparation_calls": 3,
+              "event_probability_from_amplification_identity": 0.9832351394496632,
+              "reference_probability_from_amplification_identity": 0.9832351394496628,
+              "event_bias_bound_to_reference_amplified_circuit": 4.2881518128365826e-14
+            },
+            {
+              "depth": 2,
+              "preparation_calls": 5,
+              "event_probability_from_amplification_identity": 0.4546691594403738,
+              "reference_probability_from_amplification_identity": 0.4546691594403774,
+              "event_bias_bound_to_reference_amplified_circuit": 7.146919688060971e-14
+            },
+            {
+              "depth": 4,
+              "preparation_calls": 9,
+              "event_probability_from_amplification_identity": 0.8557863171748669,
+              "reference_probability_from_amplification_identity": 0.8557863171748625,
+              "event_bias_bound_to_reference_amplified_circuit": 1.2864455438509748e-13
+            },
+            {
+              "depth": 8,
+              "preparation_calls": 17,
+              "event_probability_from_amplification_identity": 0.9061146099005303,
+              "reference_probability_from_amplification_identity": 0.9061146099005376,
+              "event_bias_bound_to_reference_amplified_circuit": 2.42995269394073e-13
+            }
+          ],
+          "per_A_and_inverse_resource_accounting": {
+            "logical_qubits": 7,
+            "clean_ancillas": 1,
+            "dirty_ancillas": 0,
+            "native_gates": 137546,
+            "ccx": 16384,
+            "native_gate_counts": {
+              "p": 9272,
+              "rz": 26830,
+              "h": 3100,
+              "cx": 81960,
+              "ccx": 16384
+            },
+            "serial_native_depth_upper_bound": 101057,
+            "arbitrary_rotations": 29876,
+            "t_count_estimate": 2686308,
+            "allocated_rotation_synthesis_budget": 0.001,
+            "allocated_rotation_synthesis_budget_exact": "1/1000",
+            "used_rotation_synthesis_allowance_exact": "4582035053700879951326021375209976405304994459677094465551462155764265415282092873389811762607277725209736072572828479379170882177879303199066652102622198756330507852590463485275351794176579170521109185449647705125158997701638564152049053/4582035053700880311106805043061681267052360935085683334735851846025830899545410206267995903935527600783935633035926537846147608041874863373675386994599691684726944188447112704000000000000000000000000000000000000000000000000000000000000000000",
+            "special_rotation_replacement_error_bound": 1.9704566998280913e-13,
+            "rotation_synthesis_executed": false
+          },
+          "repeated_amplification_accounting": {
+            "logical_qubits": 7,
+            "clean_ancillas": 1,
+            "dirty_ancillas": 0,
+            "native_gates": 308666560,
+            "ccx": 36704000,
+            "native_gate_counts": {
+              "p": 20996800,
+              "rz": 60133760,
+              "h": 7007360,
+              "cx": 183799680,
+              "ccx": 36704000,
+              "x": 24960
+            },
+            "serial_native_depth_upper_bound": 226784320,
+            "arbitrary_rotations": 67023040,
+            "t_count_estimate": 8248998080,
+            "allocated_rotation_synthesis_budget": 0.001,
+            "allocated_rotation_synthesis_budget_exact": "1/1000",
+            "used_rotation_synthesis_allowance_exact": "8378578383910180091936434621187674745508263148150289663223788961843154221583237540691311614051350756023945099155104043946189365943957444431817885348284110428915189073696377516975932963796504572921634642456118246253557120801256425278440239/8378578383910181140309586364455645745467174281299535240659843375590090787740178662890049652910679041433482300408551383490098483276571178740434993361553721937786412230303291801600000000000000000000000000000000000000000000000000000000000000000",
+            "special_rotation_replacement_error_bound": 4.463200766556546e-10,
+            "rotation_synthesis_executed": false
+          }
+        }
+      ],
+      "total_seconds": 31.111198333092034
+    }
+  ],
+  "checkpoint_sha256": "d8d4312ff56a28fb3a3bcd8c877e4176c4f98347013731f82f9cb510d46ead83"
+}

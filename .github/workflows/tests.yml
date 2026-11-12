@@ -1,0 +1,28 @@
+name: scientific-correctness
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements.lock.txt
+      - run: python -m pip install -r requirements.lock.txt
+      - run: python -m pip install --no-deps --no-build-isolation -e .
+      - run: python -m pip check
+      - run: python scripts/package_release.py --output dist/qflow-compiler.zip
+      - run: git diff --exit-code -- release_manifest.json
+      - name: Verify extracted release and saved scientific evidence
+        run: >-
+          python scripts/smoke_release.py
+          --archive dist/qflow-compiler.zip
+          --destination "${{ runner.temp }}/floworacle-extracted"
+          --record-dir "${{ runner.temp }}/floworacle-checks"
+        env:
+          MPLBACKEND: Agg
+          MPLCONFIGDIR: /tmp/floworacle-mpl

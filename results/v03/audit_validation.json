@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "tests": {
+    "tests": 150,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "original_source_manifest_entries_unchanged": 349,
+  "comparisons": {
+    "oracles.csv": {
+      "rows": 252,
+      "changed_existing_nontiming_fields": [
+        "per_rotation_error"
+      ],
+      "added_fields": [
+        "rotation_error_budget_exact",
+        "special_rotation_replacement_error_bound",
+        "special_rotation_replacement_error_bound_exact"
+      ]
+    },
+    "oracles_pareto.csv": {
+      "rows": 63,
+      "changed_existing_nontiming_fields": [],
+      "added_fields": []
+    },
+    "oracles_qubit_caps.csv": {
+      "rows": 466,
+      "changed_existing_nontiming_fields": [],
+      "added_fields": []
+    },
+    "preparation_midpoints.csv": {
+      "rows": 320,
+      "changed_existing_nontiming_fields": [
+        "per_rotation_error"
+      ],
+      "added_fields": [
+        "rotation_error_budget_exact",
+        "special_rotation_replacement_error_bound",
+        "special_rotation_replacement_error_bound_exact"
+      ]
+    }
+  },
+  "preparation_resources_and_native_bounds_unchanged": true,
+  "exact_aggregate_synthesis_allocations_verified": true,
+  "budget_convention": "exact decimal string, matching conditional certificate",
+  "replayed_v02_in_this_audit": false,
+  "baseline": "git tag v0.3.0",
+  "release": "0.3.1"
+}

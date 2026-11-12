@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "scope": "recorded scientific experiments; no quantum-advantage assertion",
+  "shared_checkpoint_sha256": "d8d4312ff56a28fb3a3bcd8c877e4176c4f98347013731f82f9cb510d46ead83",
+  "grid_sizes": [
+    8,
+    16,
+    32,
+    64
+  ],
+  "finest_grid_wave_classical_tv": 0.0002788527962069143,
+  "finest_grid_model_target_tv": 0.11622491349283823,
+  "hermiticity_frobenius_error": 6.759698457714391e-16,
+  "phase_oracle_count": 68,
+  "all_tt_ancillas_clean": true,
+  "all_tt_address_checks_exhaustive": true,
+  "maximum_phase_gate_error": 6.661428497319261e-16,
+  "complete_flow_native_gate_vs_block_error": 5.594510646684374e-13,
+  "maximum_amplification_identity_error": 5.535016889268718e-12,
+  "hardware_execution": false
+}

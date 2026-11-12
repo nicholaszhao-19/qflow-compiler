@@ -1,0 +1,104 @@
+{
+  "dataset": "smooth_cfm_gmm",
+  "grid": 4,
+  "dimension": 2,
+  "rank_cap": 2,
+  "retained_rank": 2,
+  "time": 0.5,
+  "beta": 0.2,
+  "table_points": 16,
+  "tt_coefficients": 16,
+  "coefficient_to_dense_ratio": 1.0,
+  "singular_values": [
+    1.4864381110131328,
+    1.1949389271676192,
+    0.8767837809137942,
+    0.23706811727403979
+  ],
+  "architecture_rank_upper_bound": 4,
+  "svd_tail_frobenius": 0.9082681821474019,
+  "table_evaluation_seconds": 0.0007695479980611708,
+  "core_construction_seconds": 0.0009806779999053106,
+  "truncation_sup_error": 0.38045493386727003,
+  "rank_phase_error": 0.07607263166412317,
+  "classical_preprocessing": "materialized dense grid then 2D TT-SVD (matrix SVD)",
+  "experiment": "rank_precision",
+  "method": "reversible_tt",
+  "dimensions": 2,
+  "grid_sizes": [
+    4,
+    4
+  ],
+  "ranks": [
+    1,
+    2,
+    1
+  ],
+  "core_fraction_bits": 5,
+  "final_fraction_bits": 10,
+  "coefficient_widths": [
+    7,
+    7
+  ],
+  "accumulator_widths": [
+    7,
+    13
+  ],
+  "accumulator_absolute_bounds": [
+    [
+      "38",
+      "25"
+    ],
+    [
+      "2069"
+    ]
+  ],
+  "coefficient_bank_qubits": 14,
+  "workspace_qubits": 15,
+  "intermediate_register_qubits": 27,
+  "coefficient_table_entries": 16,
+  "core_quantization_bound": 0.036242297389467604,
+  "compile_seconds": 0.007740240998828085,
+  "dense_validation_preprocess_seconds": 0.0001173169985122513,
+  "arithmetic": "exact signed integer contraction; no intermediate truncation",
+  "qrom": "coherent shared-prefix X/CX/CCX; constant-column/subtree simplification",
+  "uncomputation": "entire compute circuit inverted after phase; reusable coefficient bank unloaded per stage",
+  "phase_scale": 0.0001953125,
+  "logical_qubits": 60,
+  "address_qubits": 4,
+  "ancilla_qubits": 56,
+  "gate_count": 2321,
+  "native_depth": 1456,
+  "cx": 1182,
+  "ccx": 1088,
+  "rccx": 0,
+  "single_qubit_gates": 51,
+  "cnot_decomposed": 7710,
+  "arbitrary_rotations": 13,
+  "t_count_estimate": 8409,
+  "t_depth_macro_estimate": 2349,
+  "rotation_error_budget": 0.0001,
+  "per_rotation_error": 7.692307692307692e-06,
+  "rotation_model_slope": 3.0,
+  "rotation_model_offset": 10,
+  "native_gate_counts": {
+    "cx": 1182,
+    "ccx": 1088,
+    "x": 38,
+    "p": 13
+  },
+  "validated_inputs": 16,
+  "exhaustive": true,
+  "address_preserved": true,
+  "ancillas_clean": true,
+  "inverse_ancillas_clean": true,
+  "basis_phase_error": 1.3877787807814457e-16,
+  "superposition_error": 1.4668674416536647e-16,
+  "inverse_error": 2.260423402627585e-16,
+  "validation_seconds": 0.02773802600131603,
+  "t_count_estimate_slope4": 8630,
+  "quantization_sup_error": 0.015366871200063414,
+  "total_potential_sup_error": 0.3911211781988061,
+  "total_operator_error": 0.07820429314326213,
+  "operator_error_bound": 0.08333944625134754
+}

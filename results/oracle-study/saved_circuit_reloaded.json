@@ -1,0 +1,10 @@
+{
+  "validated_inputs": 16,
+  "exhaustive": true,
+  "address_preserved": true,
+  "ancillas_clean": true,
+  "inverse_ancillas_clean": true,
+  "basis_phase_error": 1.3877787807814457e-16,
+  "superposition_error": 1.4668674416536647e-16,
+  "inverse_error": 2.260423402627585e-16
+}

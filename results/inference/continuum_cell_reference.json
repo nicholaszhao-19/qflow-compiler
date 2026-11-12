@@ -1,0 +1,49 @@
+{
+  "method": "backward learned-flow characteristics with product Gauss-Legendre quadrature",
+  "cell_interval_per_axis": [
+    1.125,
+    5.625
+  ],
+  "refinements": [
+    {
+      "quadrature_nodes_per_axis": 16,
+      "reverse_RK4_steps": 128,
+      "probability": 0.1536970363287915,
+      "seconds": 0.2641836199982208,
+      "steps": 128,
+      "maximum_absolute_log_jacobian": 2.109013589714445
+    },
+    {
+      "quadrature_nodes_per_axis": 24,
+      "reverse_RK4_steps": 128,
+      "probability": 0.15370092656392292,
+      "seconds": 0.5405508620024193,
+      "steps": 128,
+      "maximum_absolute_log_jacobian": 2.167604571575297
+    },
+    {
+      "quadrature_nodes_per_axis": 32,
+      "reverse_RK4_steps": 128,
+      "probability": 0.15370076408433472,
+      "seconds": 0.9723591179972573,
+      "steps": 128,
+      "maximum_absolute_log_jacobian": 2.1951561498739744
+    },
+    {
+      "quadrature_nodes_per_axis": 32,
+      "reverse_RK4_steps": 256,
+      "probability": 0.15370076416505776,
+      "seconds": 1.8534419720017468,
+      "steps": 256,
+      "maximum_absolute_log_jacobian": 2.195156151617007
+    }
+  ],
+  "probability": 0.15370076416505776,
+  "last_spatial_quadrature_change": 1.6247958820048147e-07,
+  "last_reverse_RK4_change": 8.072303936401681e-11,
+  "certified_error_bound": false,
+  "total_seconds": 3.634247564001271,
+  "finite_grid_reference_probability_bias": -0.007907192610557445,
+  "compiled_probability_bias": -0.008465388605814195,
+  "learned_model_minus_target_GMM_cell_probability": 0.014509787819055292
+}
