@@ -12,3 +12,5 @@ QFlow Compiler v1 includes the data from the studies below. The labels and paths
 The [release audit](../release_audit.md) records the verified results. The
 [reproduction guide](../reproduction.md) describes the current benchmark and the
 input needed to replay the frozen v0.2.0 release.
+
+The [original public v1 snapshot](https://github.com/nicholaszhao-19/qflow-compiler/tree/f7aec716c364e04b1e2648ff48adb1e8ca283975) preserves the secondary figures, diagnostic arrays, and test logs. The reproduction scripts can regenerate these outputs from the current checkout.

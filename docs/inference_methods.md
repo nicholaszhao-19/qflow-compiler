@@ -16,11 +16,9 @@ python scripts/run_inference.py
 
 The trained checkpoint is `data/checkpoints/smooth_gmm.pt`. Its SHA-256, exact
 configuration, versions, command, raw measurement counts, independent trial
-estimates, compiled preparation, event circuits, and numerical results are
-saved under `results/inference/`. The preparation is serialized as
-`prepared_flow.qpy`; the event and zero reflection are also exported in OpenQASM
-3. These artifacts contain actual quantum gates, not a unitary matrix used as
-an unexplained oracle.
+estimates, and numerical results are saved under `results/inference/`. The
+bundled `prepared_flow.qpy.gz` contains the original Qiskit QPY circuit. A fresh
+run writes `prepared_flow.qpy`. The event and zero reflection are in OpenQASM 3.
 
 ## Recorded default-run findings
 

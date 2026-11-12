@@ -21,3 +21,20 @@ vendor/tnwf-paper/.git/
 # Generated diagnostics
 results/**/*.log
 results/smooth/metrics_partial.json
+
+# Reproducible outputs kept out of the source checkout
+/data/checkpoints/*.quality.npz
+/figures/end_to_end.*
+/figures/oracle_error_resources.*
+/figures/scaling_resources.*
+/figures/training_quality.*
+/figures/manifest.json
+/results/evolution_states.npz
+/results/reference_states.npz
+/results/**/pytest*.xml
+/results/inference/inference_summary.png
+/results/inference/prepared_flow.qpy
+/results/oracle-study/accuracy_resources.*
+/results/smooth/convergence.png
+/results/smooth/learned_flow.png
+/results/smooth/states.npz

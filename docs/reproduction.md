@@ -34,6 +34,8 @@ python scripts/replay_v02.py --zip /path/to/FlowOracleBench-v0.2.0.zip --out /tm
 
 Run `bash scripts/reproduce_legacy.sh` with the bundled checkpoints to regenerate the earliest results. Its optional `--retrain` flag replaces those checkpoints in the working copy. [Execution provenance](provenance.md)
 
+The drivers generate secondary figures, diagnostic arrays and test logs locally. For the historical v0.3.0 comparison, run `bash scripts/reproduce_v03.sh` first to generate the test XML used by `scripts/verify_audit_delta.py`.
+
 ## Source archive
 
 ```bash

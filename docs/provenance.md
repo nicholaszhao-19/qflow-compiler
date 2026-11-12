@@ -26,7 +26,7 @@ with the same seed.
 The code is installed and tested in a fresh, isolated Python 3.12.14 virtual
 environment from `requirements.lock.txt`, without system site packages.
 The recorded correctness run contains 103 passing tests, no failures, errors,
-or skipped tests. `results/pytest.xml` preserves the original test record.
+or skipped tests. The XML log is in the [original public snapshot](archive/README.md).
 
 The delivered experiments contain:
 
@@ -64,8 +64,8 @@ reports an AMD EPYC 9V74 CPU; host load and allocation are not controlled.
 `results/environment.json` records the scientific package versions and the
 upstream commit. The package lock pins direct and transitive Python packages.
 The final CSV and JSON tables were checked for identical case identities and
-key error and resource values. `figures/manifest.json` records the source
-table hashes for the figures from this study.
+key error and resource values. `scripts/plot_results.py` regenerates the figures
+and their source hash manifest.
 
 The expected reproducible outputs are the circuit structure, qubit/gate
 counts, precision selections, and numerical results within floating-point

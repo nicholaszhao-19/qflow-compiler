@@ -156,9 +156,9 @@ metric. These diagnostics do not execute a quantum circuit.
 | Particle RMS difference, 128 versus 256 RK4 steps | 0.223220 | 0.013902 | 0.004192 |
 
 The analytic diagnostic velocity follows ordinary Gaussian conditioning for
-independent Gaussian endpoints. It is not used as a training teacher. Raw
-source, target, ODE endpoint, and bridge-velocity arrays are preserved in the
-adjacent `.quality.npz` files; exact metrics and seeds are in `.quality.json`.
+independent Gaussian endpoints and is used only for evaluation. The metrics
+and seeds are in `.quality.json`. Run `scripts/evaluate_training.py` with the
+corresponding checkpoint to regenerate the diagnostic arrays.
 
 The rank-two 2D model has a substantial particle-level RK4 refinement
 discrepancy despite a fairly stable projected distribution metric. Its

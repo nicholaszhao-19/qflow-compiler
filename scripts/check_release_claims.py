@@ -5,6 +5,7 @@ import argparse
 from collections import defaultdict
 import csv
 from fractions import Fraction
+import gzip
 import json
 import math
 from pathlib import Path
@@ -65,7 +66,12 @@ def check_v02(root):
     record = json.loads((inference / "results.json").read_text())
     prep = record["preparation"]
     resource = prep["native_gate_resources"]
-    with (inference / "prepared_flow.qpy").open("rb") as stream:
+    circuit_path = inference / "prepared_flow.qpy"
+    if circuit_path.is_file():
+        stream = circuit_path.open("rb")
+    else:
+        stream = gzip.open(circuit_path.with_suffix(".qpy.gz"), "rb")
+    with stream:
         circuit, = qpy.load(stream)
     assert circuit.num_qubits == resource["logical_qubits"]
     assert len(circuit.data) == resource["gate_count"] and circuit.depth() == resource["native_depth"]
